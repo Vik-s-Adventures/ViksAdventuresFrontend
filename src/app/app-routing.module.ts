@@ -17,10 +17,13 @@ import {
   QuestionThreePageComponent
 } from "./capacityone/components/questionnaire-level-one/question-three-page/question-three-page.component";
 import {GooglefontComponent} from "./public/component/googlefont/googlefont.component";
+import {
+  PerformanceSublevelOneComponent
+} from "./capacityone/components/performance-sublevel-one/performance-sublevel-one.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'maps', pathMatch:'full'},
-  {path: 'maps', component: MapsPageComponent},
+  {path: 'maps', component: PerformanceSublevelOneComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
   {path: 'questionOne', component: QuestionOnePageComponent},
   {path: 'questionTwo', component: QuestionTwoPageComponent},

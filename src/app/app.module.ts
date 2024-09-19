@@ -29,6 +29,9 @@ import {
   QuestionThreePageComponent
 } from "./capacityone/components/questionnaire-level-one/question-three-page/question-three-page.component";
 import {GooglefontComponent} from "./public/component/googlefont/googlefont.component";
+import {
+  PerformanceSublevelOneComponent
+} from "./capacityone/components/performance-sublevel-one/performance-sublevel-one.component";
 
 
 
@@ -45,7 +48,8 @@ import {GooglefontComponent} from "./public/component/googlefont/googlefont.comp
     QuestionTwoPageComponent,
     QuestionThreePageComponent,
     TimeCounterFooterPageComponent,
-    GooglefontComponent
+    GooglefontComponent,
+    PerformanceSublevelOneComponent
   ],
   imports: [
     BrowserModule,
