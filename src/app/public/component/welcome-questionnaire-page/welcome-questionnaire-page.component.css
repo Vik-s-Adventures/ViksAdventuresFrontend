@@ -1,0 +1,58 @@
+body {
+  background-image: url('https://i.ibb.co/tsf859Q/fondoinicio.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0;
+}
+
+.card-container {
+  display: flex; /* Flexbox para alinear horizontalmente */
+  justify-content: space-around; /* Espacio entre las tarjetas */
+  align-items: center; /* Centra verticalmente las tarjetas */
+  padding: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+mat-card{
+  width: 450px; /* Ancho fijo para cada card */
+  height: 200px; /* Ajusta la altura según sea necesario */
+  margin-top: 10px; /* Separación entre las cards */
+  background-color: darkblue; /* Fondo negro */
+  border-radius: 8px; /* Bordes redondeados */
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
+  display: flex;
+
+
+  #sprite-container {
+    padding-top: 200px;
+    margin-left: 190px;
+    width: 500px; /* Tamaño del contenedor del sprite */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Estilos para centrar el contenido de la card */
+  .center-content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura */
+  }
+
+  /* Estilos para centrar la imagen */
+  .centered-image {
+    display: block;
+    max-width: 100%; /* Asegura que la imagen no se salga del card */
+    height: auto;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+}
+
+
+

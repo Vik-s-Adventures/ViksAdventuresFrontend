@@ -1,0 +1,27 @@
+.minecraft-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #7cfc00; /* Color verde que simula un campo */
+}
+
+.minecraft-card {
+  width: 600px;
+  background-color: #1a1a1a; /* Fondo oscuro estilo Minecraft */
+  color: white;
+  border: 4px solid #4CAF50; /* Borde verde estilo Minecraft */
+  border-radius: 10px;
+  font-family: 'Press Start 2P', cursive; /* Aplicar la fuente de Minecraft */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mat-card-title {
+  font-size: 24px;
+  color: #FFCC00; /* Color dorado estilo Minecraft */
+}
+
+.mat-radio-button {
+  font-size: 18px;
+  color: #FFFFFF;
+}

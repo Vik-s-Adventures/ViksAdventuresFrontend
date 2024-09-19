@@ -1,0 +1,39 @@
+body {
+  background-image: url('https://i.ibb.co/tsf859Q/fondoinicio.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0;
+}
+
+.titulo {
+  padding-top: 65px;
+  display: flex; /* Utiliza flexbox para centrar la imagen dentro del h1 */
+  justify-content: center; /* Centra horizontalmente la imagen */
+  align-items: center; /* Centra verticalmente la imagen */
+}
+
+.titulo img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.card-container {
+  display: flex; /* Utiliza flexbox para alinear las cards horizontalmente */
+  justify-content: space-around; /* Espacio entre las cards */
+  align-items: flex-start; /* Alinea las cards en la parte superior */
+  flex-wrap: nowrap; /* Evita que las cards se ajusten a múltiples líneas */
+  padding: 100px; /* Espaciado alrededor del contenedor */
+  position: relative; /* Permite que las cards se posicionen sobre el fondo */
+  z-index: 1; /* Asegura que las cards estén por encima del fondo */
+}
+
+mat-card {
+  width: 250px; /* Ancho fijo para cada card */
+  margin: 10px; /* Margen entre las cards */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para destacar sobre el fondo */
+  border-radius: 8px; /* Bordes redondeados para las cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}

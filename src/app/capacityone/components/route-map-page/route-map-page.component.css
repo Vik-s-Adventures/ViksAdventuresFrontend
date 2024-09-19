@@ -1,0 +1,13 @@
+#gameContainer {
+  background-color: transparent;
+}
+
+body {
+  background-image: url('https://i.ibb.co/7jwf4hc/path.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0;
+}
