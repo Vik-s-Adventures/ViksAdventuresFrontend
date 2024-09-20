@@ -1,0 +1,16 @@
+<body>
+<mat-toolbar style="background-color: lightskyblue">
+<header>
+    <span>PUNTAJE: {{ score }}</span>
+    <span class="spacer"></span>
+    <span>VIDAS: {{ lives }}</span>
+    <span class="spacer"></span>
+    <button mat-button (click)="pauseGame()">{{ paused ? 'REANUDAR' : 'PAUSAR' }}</button>
+    <button mat-button (click)="goToMenu()">MENU</button>
+</header>
+</mat-toolbar>
+<div #gameContainer></div>
+
+
+
+</body>

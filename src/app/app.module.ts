@@ -32,6 +32,10 @@ import {GooglefontComponent} from "./public/component/googlefont/googlefont.comp
 import {
   PerformanceSublevelOneComponent
 } from "./capacityone/components/performance-sublevel-one/performance-sublevel-one.component";
+import {
+  PerformanceSublevelTwoComponent
+} from "./capacityone/components/performance-sublevel-two/performance-sublevel-two.component";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 
@@ -49,7 +53,8 @@ import {
     QuestionThreePageComponent,
     TimeCounterFooterPageComponent,
     GooglefontComponent,
-    PerformanceSublevelOneComponent
+    PerformanceSublevelOneComponent,
+    PerformanceSublevelTwoComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +68,7 @@ import {
     MatRadioModule,
     FormsModule,
     MatButtonModule,
+    MatToolbarModule,
   ],
   providers: [{provide:HttpClientModule, useClass:HttpClientModule},],
   bootstrap: [AppComponent]

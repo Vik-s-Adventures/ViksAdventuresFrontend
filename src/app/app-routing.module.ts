@@ -20,10 +20,13 @@ import {GooglefontComponent} from "./public/component/googlefont/googlefont.comp
 import {
   PerformanceSublevelOneComponent
 } from "./capacityone/components/performance-sublevel-one/performance-sublevel-one.component";
+import {
+  PerformanceSublevelTwoComponent
+} from "./capacityone/components/performance-sublevel-two/performance-sublevel-two.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'maps', pathMatch:'full'},
-  {path: 'maps', component: PerformanceSublevelOneComponent},
+  {path: 'maps', component: PerformanceSublevelTwoComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
   {path: 'questionOne', component: QuestionOnePageComponent},
   {path: 'questionTwo', component: QuestionTwoPageComponent},
