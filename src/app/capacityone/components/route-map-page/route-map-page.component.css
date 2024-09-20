@@ -1,13 +1,43 @@
 #gameContainer {
   background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Distribuir 5 columnas */
+  grid-gap: 20px; /* Espacio entre las tarjetas */
+  padding: 50px;
+  justify-items: center;
+  align-items: center;
 }
+
 
 body {
   background-image: url('https://i.ibb.co/7jwf4hc/path.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
-  margin: 0; /* Elimina márgenes por defecto */
+  height: 100vh;
+  margin: 0;
   padding: 0;
+}
+
+mat-card {
+  width: 300px; /* Ajusta el tamaño de la tarjeta */
+  height: 200px; /* Ajusta la altura de la tarjeta */
+  background-color: #ffcc00; /* Cambia el color de fondo del mat-card */
+  color: #000000; /* Color de texto dentro de la tarjeta */
+  font-family: 'Arial', sans-serif; /* Cambia la fuente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  padding: 20px; /* Añadir algo de relleno interno */
+}
+
+/* Añadir un pequeño efecto hover a la tarjeta */
+mat-card:hover {
+  background-color: #ffaa00; /* Color más oscuro al hacer hover */
+  cursor: pointer;
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+  transition: all 0.3s ease;
 }

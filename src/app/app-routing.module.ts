@@ -23,7 +23,7 @@ import {
 
 const routes: Routes = [
   {path: '', redirectTo:'maps', pathMatch:'full'},
-  {path: 'maps', component: PerformanceSublevelOneComponent},
+  {path: 'maps', component: MapsPageComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
   {path: 'questionOne', component: QuestionOnePageComponent},
   {path: 'questionTwo', component: QuestionTwoPageComponent},
