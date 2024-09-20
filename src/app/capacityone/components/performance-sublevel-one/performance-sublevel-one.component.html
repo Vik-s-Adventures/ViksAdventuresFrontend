@@ -1,13 +1,15 @@
+<body>
 <div class="game-container">
   <header>
     <div class="header-content">
-      <span class="score">Score: {{ score }}</span>
-      <span class="lives">Lives: {{ lives }}</span>
-      <button (click)="togglePause()">
-        {{ gamePaused ? 'Resume' : 'Pause' }}
+      <span class="score" style="font-family: 'Press Start 2P',ui-sans-serif; color: white;">MONEDAS: {{ score }}</span>
+      <span class="lives" style="font-family: 'Press Start 2P',ui-sans-serif; color: white;">VIDAS: {{ lives }}</span>
+      <button style="font-family: 'Press Start 2P',ui-sans-serif; color: black;" (click)="togglePause()">
+        {{ gamePaused ? 'Resume' : 'PAUSA' }}
       </button>
-      <button (click)="navigateToOtherComponent()">Go to Another Component</button>
+      <button style="font-family: 'Press Start 2P',ui-sans-serif; color: black;" (click)="navigateToOtherComponent()">MENU</button>
     </div>
   </header>
   <canvas id="myCanvas"></canvas>
 </div>
+</body>

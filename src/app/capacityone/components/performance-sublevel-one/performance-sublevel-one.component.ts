@@ -14,8 +14,8 @@ export class PerformanceSublevelOneComponent implements OnInit {
   ballRadius = 20;
   x = 0;
   y = 0;
-  dx = 5;
-  dy = -5;
+  dx = 7;
+  dy = -7;
   paddleHeight = 20;
   paddleWidth = 155;
   paddleX = 0;
@@ -25,14 +25,15 @@ export class PerformanceSublevelOneComponent implements OnInit {
 
   brickRowCount = 5;
   brickColumnCount = 20;
-  brickWidth = 50;  // Tamaño más pequeño para que entren más bloques
-  brickHeight = 20;
+  brickWidth = 66;  // Tamaño más pequeño para que entren más bloques
+  brickHeight = 30;
   brickPadding = 10;
-  brickOffsetTop = 30;
-  brickOffsetLeft = 30;
+  brickOffsetTop = 10;
+  brickOffsetLeft = 10;
   bricks: any[] = [];
   score = 0;
-  lives = 5;
+  lives = 7;
+
 
   constructor(private renderer: Renderer2, private router: Router) { }
 
@@ -40,6 +41,7 @@ export class PerformanceSublevelOneComponent implements OnInit {
     this.initCanvas();
     this.initBricks();
     this.adjustCanvasSize();
+    window.addEventListener('resize', this.adjustCanvasSize.bind(this));  // Escuchar cambios de tamaño de la ventan
     this.draw();
 
     // Ajustar la posición inicial de la paleta
@@ -93,7 +95,7 @@ export class PerformanceSublevelOneComponent implements OnInit {
   adjustCanvasSize() {
     if (this.canvas) {
       this.canvas.width = window.innerWidth;
-      this.canvas.height = window.innerHeight;
+      this.canvas.height = window.innerHeight-50;
       this.paddleX = (this.canvas.width - this.paddleWidth) / 2;
     }
   }
@@ -107,6 +109,10 @@ export class PerformanceSublevelOneComponent implements OnInit {
 
   navigateToOtherComponent() {
     this.router.navigate(['/other-component']);
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.adjustCanvasSize();  // Ajustar el canvas cada vez que la ventana cambie de tamaño
   }
 
   drawBall() {
@@ -139,7 +145,7 @@ export class PerformanceSublevelOneComponent implements OnInit {
             this.bricks[c][r].x = brickX;
             this.bricks[c][r].y = brickY;
             const img = new Image();
-            img.src = 'assets/images/moneda.png'; // Ruta a la imagen de fruta
+            img.src = 'assets/images/manzana.png'; // Ruta a la imagen de fruta
             this.ctx.drawImage(img, brickX, brickY, this.brickWidth, this.brickHeight);
           }
         }
@@ -156,7 +162,7 @@ export class PerformanceSublevelOneComponent implements OnInit {
             this.dy = -this.dy;
             b.status = 0;
             this.score++;
-            if (this.score === this.brickRowCount * this.brickColumnCount) {
+            if (this.score >= 40) {
               alert('YOU WIN, CONGRATS!');
               document.location.reload();
             }
@@ -169,18 +175,17 @@ export class PerformanceSublevelOneComponent implements OnInit {
   drawScore() {
     if (this.ctx) {
       this.ctx.font = '16px Arial';
-      this.ctx.fillStyle = '#006400'; // Verde oscuro para el texto
     }
   }
 
   drawLives() {
     if (this.ctx) {
       this.ctx.font = '16px Arial';
-      this.ctx.fillStyle = '#006400'; // Verde oscuro para el texto
     }
   }
 
   draw() {
+    let lifeLost = false;
     if (this.gamePaused) {
       return;
     }
@@ -203,8 +208,10 @@ export class PerformanceSublevelOneComponent implements OnInit {
       } else if (this.y + this.dy > this.canvas!.height - this.ballRadius) {
         if (this.x > this.paddleX && this.x < this.paddleX + this.paddleWidth) {
           this.dy = -this.dy;
+          lifeLost = false;  // Resetea el indicador cuando la pelota toca la paleta
         } else {
           this.lives--;
+          lifeLost = true;
           if (!this.lives) {
             alert('GAME OVER');
             document.location.reload();
@@ -233,9 +240,9 @@ export class PerformanceSublevelOneComponent implements OnInit {
 
       // Movimiento de la paleta según teclas presionadas
       if (this.rightPressed && this.paddleX < this.canvas!.width - this.paddleWidth) {
-        this.paddleX += 9;
+        this.paddleX += 15;
       } else if (this.leftPressed && this.paddleX > 0) {
-        this.paddleX -= 9;
+        this.paddleX -= 15;
       }
 
       this.x += this.dx;
