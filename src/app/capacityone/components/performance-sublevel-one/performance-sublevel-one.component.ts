@@ -11,7 +11,7 @@ export class PerformanceSublevelOneComponent implements OnInit {
   // Inicialización de las variables necesarias
   canvas!: HTMLCanvasElement;
   ctx!: CanvasRenderingContext2D;
-  ballRadius = 20;
+  ballRadius = 15;
   x = 0;
   y = 0;
   dx = 7;
@@ -27,7 +27,7 @@ export class PerformanceSublevelOneComponent implements OnInit {
   brickColumnCount = 20;
   brickWidth = 66;  // Tamaño más pequeño para que entren más bloques
   brickHeight = 30;
-  brickPadding = 10;
+  brickPadding = 15;
   brickOffsetTop = 10;
   brickOffsetLeft = 10;
   bricks: any[] = [];
