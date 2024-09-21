@@ -1,8 +1,6 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
-import {MatButtonModule} from "@angular/material/button";
-import {Router, RouterLink} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 import {TimerService} from "../../../shared/services/timer.service";
-import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-time-counter-footer-page',
@@ -14,7 +12,7 @@ export class TimeCounterFooterPageComponent implements OnInit {
   constructor(private router: Router, public timerService: TimerService) {}
 
   ngOnInit(): void {
-    this.timerService.startTimer();  // Iniciar o continuar el temporizador
+    this.timerService.startTimer();  // Iniciar el cronómetro de 5 minutos
     this.updateTimerDisplay();       // Mostrar el tiempo en pantalla
   }
 
@@ -27,14 +25,7 @@ export class TimeCounterFooterPageComponent implements OnInit {
     }, 1000);
   }
 
-  goToNext(): void {
-    const currentUrl = this.router.url;
-    if (currentUrl === '/questionOne') {
-      this.router.navigate(['/questionTwo']);
-    } else if (currentUrl === '/questionTwo') {
-      this.router.navigate(['/questionThree']);
-    } else {
-      this.router.navigate(['/results']);  // Al finalizar, mostramos el tiempo total
-    }
+  ngOnDestroy(): void {
+    this.timerService.stopTimer();  // Detener el temporizador cuando el componente se destruya
   }
 }

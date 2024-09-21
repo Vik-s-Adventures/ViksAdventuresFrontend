@@ -18,13 +18,17 @@ import {
   PerformanceSublevelTwoComponent
 } from "./capacityone/components/performance-sublevel-two/performance-sublevel-two.component";
 import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
+import {MenuPageComponent} from "./public/component/menu-page/menu-page.component";
+import {RankingPageComponent} from "./public/component/ranking-page/ranking-page.component";
 
 const routes: Routes = [
-  {path: '', redirectTo:'maps', pathMatch:'full'},
-  {path: 'maps', component: QuestionTwoPageComponent},
+  {path: '', redirectTo:'menu', pathMatch:'full'},
+  {path: 'menu', component: MenuPageComponent},
+  {path: 'questionnaire', component: QuestionTwoPageComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
   {path: 'questionTwo', component: QuestionTwoPageComponent},
-  {path: 'mapstypes', component: MapsPageComponent},
+  {path: 'maps', component: MapsPageComponent},
+  {path: 'ranking', component: RankingPageComponent},
   {path: 'routeMap', component: RouteMapPageComponent},
 
 ];

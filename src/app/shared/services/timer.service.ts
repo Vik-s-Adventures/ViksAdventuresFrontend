@@ -1,34 +1,29 @@
 import { Injectable } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root' // Singleton: hace que el servicio esté disponible en toda la app
 })
 export class TimerService {
   private intervalId: any;
-  public hours: number = 0;
-  public minutes: number = 0;
+  public minutes: number = 10;  // Inicializar en 5 minutos
   public seconds: number = 0;
 
-  constructor() {
+  constructor(private router: Router) {
     this.loadTimerState();  // Cargar el tiempo desde el almacenamiento (en caso de refresh)
   }
 
   startTimer(): void {
     if (!this.intervalId) {  // Solo iniciar si no hay un temporizador corriendo
       this.intervalId = setInterval(() => {
-        this.seconds++;
-
-        if (this.seconds === 60) {
-          this.seconds = 0;
-          this.minutes++;
-        }
-
-        if (this.minutes === 60) {
-          this.minutes = 0;
-          this.hours++;
-        }
+        this.decrementTime();
 
         this.saveTimerState();  // Guardar el estado del temporizador continuamente
+
+        if (this.minutes === 0 && this.seconds === 0) {
+          this.stopTimer();
+          this.router.navigate(['/mapstypes']);  // Redirigir cuando el cronómetro llegue a 0
+        }
       }, 1000);
     }
   }
@@ -40,14 +35,24 @@ export class TimerService {
     }
   }
 
+  decrementTime(): void {
+    if (this.seconds === 0) {
+      if (this.minutes > 0) {
+        this.minutes--;
+        this.seconds = 59;
+      }
+    } else {
+      this.seconds--;
+    }
+  }
+
   getFormattedTime(): string {
-    return this.formatTime(this.hours) + ':' + this.formatTime(this.minutes) + ':' + this.formatTime(this.seconds);
+    return this.formatTime(this.minutes) + ':' + this.formatTime(this.seconds);
   }
 
   // Guardar el estado del temporizador en sessionStorage
   private saveTimerState(): void {
     const timerState = {
-      hours: this.hours,
       minutes: this.minutes,
       seconds: this.seconds
     };
@@ -59,7 +64,6 @@ export class TimerService {
     const savedState = sessionStorage.getItem('timerState');
     if (savedState) {
       const timerState = JSON.parse(savedState);
-      this.hours = timerState.hours;
       this.minutes = timerState.minutes;
       this.seconds = timerState.seconds;
     }
@@ -70,8 +74,7 @@ export class TimerService {
   }
 
   resetTimer(): void {
-    this.hours = 0;
-    this.minutes = 0;
+    this.minutes = 5;  // Reiniciar a 5 minutos
     this.seconds = 0;
     this.saveTimerState();  // Resetear el estado guardado
   }
