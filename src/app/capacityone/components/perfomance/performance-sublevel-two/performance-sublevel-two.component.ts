@@ -55,6 +55,9 @@ export class PerformanceSublevelTwoComponent implements OnInit {
   goToMenu(): void {
     this.router.navigate(['/menu']);
   }
+  goToRuta(): void {
+    this.router.navigate(['/result']);
+  }
 
   updateScore(amount: number): void {
     this.score += amount;

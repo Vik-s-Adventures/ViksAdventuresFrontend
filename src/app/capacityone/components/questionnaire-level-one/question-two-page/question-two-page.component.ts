@@ -3,6 +3,7 @@ import {Question} from "../../../model/Question";
 import {AnswerOption} from "../../../model/AnswerOption";
 import {QuestionService} from "../../../services/question.service";
 import {AnswerOptionService} from "../../../services/answer-option.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -18,8 +19,9 @@ export class QuestionTwoPageComponent implements OnInit{
   selectedAnswer: AnswerOption | null = null;
 
   constructor(
-    private questionService: QuestionService,
-    private answerOptionService: AnswerOptionService
+      private router: Router,
+      private questionService: QuestionService,
+      private answerOptionService: AnswerOptionService
 ) {}
 
   ngOnInit(): void {
@@ -53,12 +55,12 @@ export class QuestionTwoPageComponent implements OnInit{
     });
   }
 
-  // Método para obtener las respuestas filtradas por el ID de la pregunta
+  //Método para obtener las respuestas filtradas por el ID de la pregunta
   getOptionsByQuestionId(questionId: number): AnswerOption[] {
     return this.answerOptions.filter(option => option.questionId === questionId);
   }
 
-  // Método para pasar a la siguiente pregunta
+  //Método para pasar a la siguiente pregunta
   nextQuestion(): void {
     this.selectedAnswer = null; // Resetear la selección
     this.currentQuestionIndex++;
@@ -66,6 +68,7 @@ export class QuestionTwoPageComponent implements OnInit{
     this.currentQuestion = this.questions[this.currentQuestionIndex];
   } else {
     alert('Has completado el cuestionario');
+      this.router.navigate(['/result']);  // Reemplaza 'target-route' por tu ruta de destino
   }
 }
 }

@@ -26,20 +26,21 @@ import {
 import {GooglefontComponent} from "./public/component/googlefont/googlefont.component";
 import {
   PerformanceSublevelOneComponent
-} from "./capacityone/components/performance-sublevel-one/performance-sublevel-one.component";
+} from "./capacityone/components/perfomance/performance-sublevel-one/performance-sublevel-one.component";
 import {
   PerformanceSublevelTwoComponent
-} from "./capacityone/components/performance-sublevel-two/performance-sublevel-two.component";
+} from "./capacityone/components/perfomance/performance-sublevel-two/performance-sublevel-two.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {QuestionService} from "./capacityone/services/question.service";
 import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
 import {AnswerOptionService} from "./capacityone/services/answer-option.service";
-import {StudentService} from "./capacityone/services/student.service";
+import {StudentService} from "./profile/services/student.service";
 import {QuizService} from "./capacityone/services/quiz.service";
 import {QuizResultService} from "./capacityone/services/quiz-result.service";
 import {StudentResponseService} from "./capacityone/services/student-response.service";
 import {MenuPageComponent} from "./public/component/menu-page/menu-page.component";
 import {RankingPageComponent} from "./public/component/ranking-page/ranking-page.component";
+import {ProfilePageComponent} from "./profile/components/profile-page/profile-page.component";
 
 
 
@@ -59,7 +60,8 @@ import {RankingPageComponent} from "./public/component/ranking-page/ranking-page
     PerformanceSublevelTwoComponent,
     PruebainitComponent,
     MenuPageComponent,
-    RankingPageComponent
+    RankingPageComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,

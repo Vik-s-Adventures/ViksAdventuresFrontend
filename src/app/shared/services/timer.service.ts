@@ -22,7 +22,7 @@ export class TimerService {
 
         if (this.minutes === 0 && this.seconds === 0) {
           this.stopTimer();
-          this.router.navigate(['/mapstypes']);  // Redirigir cuando el cronómetro llegue a 0
+          this.router.navigate(['result']);  // Redirigir cuando el cronómetro llegue a 0
         }
       }, 1000);
     }

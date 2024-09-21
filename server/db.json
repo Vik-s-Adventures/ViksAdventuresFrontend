@@ -41,54 +41,6 @@
             "questionText":"¿Cuál es el resultado 2",
             "skill":2,
             "quizId":1
-        },
-         {
-            "id":3,
-            "questionText":"¿Cuál es el resultado 3",
-            "skill":3,
-            "quizId":1
-         },
-         {
-            "id":4,
-            "questionText":"¿Cuál es el resultado 4",
-            "skill":4,
-            "quizId":1
-         },
-         {
-            "id":5,
-            "questionText":"¿Cuál es el resultado 5",
-            "skill":5,
-            "quizId":1
-         },
-        {
-            "id":6,
-            "questionText":"¿Cuál es el resultado 6",
-            "skill":6,
-            "quizId":1
-        },
-        {
-            "id":7,
-            "questionText":"¿Cuál es el resultado 7",
-            "skill":7,
-            "quizId":1
-        },
-        {
-            "id":8,
-            "questionText":"¿Cuál es el resultado 8",
-            "skill":8,
-            "quizId":1
-        },
-        {
-            "id":9,
-            "questionText":"¿Cuál es el resultado 9",
-            "skill":9,
-            "quizId":1
-        },
-        {
-            "id":10,
-            "questionText":"¿Cuál es el resultado 10",
-            "skill":10,
-            "quizId":1
         }
     ],
     "Quiz":[

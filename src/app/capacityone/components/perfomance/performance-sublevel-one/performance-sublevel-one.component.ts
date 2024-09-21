@@ -107,9 +107,13 @@ export class PerformanceSublevelOneComponent implements OnInit {
     }
   }
 
-  navigateToOtherComponent() {
-    this.router.navigate(['/other-component']);
+  goToMenu() {
+    this.router.navigate(['/menu']);
   }
+  goToRuta() {
+    this.router.navigate(['/result']);
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.adjustCanvasSize();  // Ajustar el canvas cada vez que la ventana cambie de tamaño

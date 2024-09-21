@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {StudentService} from "../../../capacityone/services/student.service";
+import {StudentService} from "../../../profile/services/student.service";
 import {QuizResultService} from "../../../capacityone/services/quiz-result.service";
-import {Student} from "../../../capacityone/model/Student";
+import {Student} from "../../../profile/model/Student";
 import {QuizResult} from "../../../capacityone/model/QuizResult";
 
 
