@@ -41,6 +41,9 @@ import {StudentResponseService} from "./capacityone/services/student-response.se
 import {MenuPageComponent} from "./public/component/menu-page/menu-page.component";
 import {RankingPageComponent} from "./public/component/ranking-page/ranking-page.component";
 import {ProfilePageComponent} from "./profile/components/profile-page/profile-page.component";
+import {ChallengesOneComponent} from "./capacityone/components/challenges/challenges-one/challenges-one.component";
+import {ChallengesTwoComponent} from "./capacityone/components/challenges/challenges-two/challenges-two.component";
+import {HeaderPageComponent} from "./public/component/header-page/header-page.component";
 
 
 
@@ -61,7 +64,10 @@ import {ProfilePageComponent} from "./profile/components/profile-page/profile-pa
     PruebainitComponent,
     MenuPageComponent,
     RankingPageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    ChallengesOneComponent,
+    ChallengesTwoComponent,
+    HeaderPageComponent,
   ],
   imports: [
     BrowserModule,

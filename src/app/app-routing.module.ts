@@ -14,10 +14,12 @@ import {
 import {
   PerformanceSublevelTwoComponent
 } from "./capacityone/components/perfomance/performance-sublevel-two/performance-sublevel-two.component";
+import {ChallengesOneComponent} from "./capacityone/components/challenges/challenges-one/challenges-one.component";
+import {ChallengesTwoComponent} from "./capacityone/components/challenges/challenges-two/challenges-two.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'menu', pathMatch:'full'},
-  {path: 'menu', component: ResultPageComponent},
+  {path: 'menu', component: MenuPageComponent},
   {path: 'questionnaire', component: QuestionTwoPageComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
   {path: 'questionTwo', component: QuestionTwoPageComponent},
@@ -28,7 +30,8 @@ const routes: Routes = [
   {path: 'result', component: ResultPageComponent},
   {path: 'sublevel1', component: PerformanceSublevelOneComponent},
   {path: 'sublevel2', component: PerformanceSublevelTwoComponent},
-
+  {path: 'challengeOne', component: ChallengesOneComponent},
+  {path: 'challengeTwo', component: ChallengesTwoComponent},
 
 ];
 

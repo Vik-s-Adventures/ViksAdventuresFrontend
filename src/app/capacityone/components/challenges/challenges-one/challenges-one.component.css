@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://i.ibb.co/tsf859Q/fondoinicio.jpg');
+  background-image: url('https://i.ibb.co/TmNbKQD/cha1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,4 +11,55 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;;
+  padding: 50px;
+  z-index: 1;
+}
+
+mat-card {
+  justify-content: start;
+  position: absolute; /* Permite mover la tarjeta usando top, left, right, bottom */
+  top: 150px;          /* Mueve la tarjeta hacia abajo desde la parte superior del contenedor */
+  left: 40px;
+  width: 700px;
+  height: 350px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.button {
+  width: 150px;
+}
+
+button {
+  position: absolute; /* Permite mover la tarjeta usando top, left, right, bottom */
+  top: 540px;          /* Mueve la tarjeta hacia abajo desde la parte superior del contenedor */
+  left: 850px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 7px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
 }

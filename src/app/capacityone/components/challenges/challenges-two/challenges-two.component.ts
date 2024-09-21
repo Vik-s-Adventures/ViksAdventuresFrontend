@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
-import {MatButtonModule} from "@angular/material/button";
+import {HeaderPageComponent} from "../../../../public/component/header-page/header-page.component";
 import {MatCardModule} from "@angular/material/card";
-import {RouterLink} from "@angular/router";
+
 
 @Component({
   selector: 'app-challenges-two',
-  standalone: true,
-    imports: [
-        MatButtonModule,
-        MatCardModule,
-        RouterLink
-    ],
   templateUrl: './challenges-two.component.html',
   styleUrl: './challenges-two.component.css'
 })
 export class ChallengesTwoComponent {
+  answer: string | undefined;
+  answers: string[] = ['A) 3 PANES', 'B) 6 PANES', 'C) 9 PANES', 'D) 12 PANES'];
+
 
 }

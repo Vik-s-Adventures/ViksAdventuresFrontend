@@ -1,5 +1,23 @@
+<app-header-page></app-header-page>
 <body>
-<mat-card>
-  <mat-card-title>MENU</mat-card-title>
-</mat-card>
+<div class="card-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title style="font-family: 'Arial Black',ui-sans-serif;">
+        1. Pedro compró cierta cantidad de panes. Puso 1/3 de esta cantidad sobre una bandeja y dejó el resto en la bolsa.
+        ¿Cuántos panes dejó Pedro en la bolsa?
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="answer">
+      <mat-radio-button *ngFor="let answer of answers" class="example-radio-button" [value]="answer">
+        {{ answer }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+</div>
+<button mat-raised-button routerLink="/sublevel1"> DESAFIO</button>
 </body>

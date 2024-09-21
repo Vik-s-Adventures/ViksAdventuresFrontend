@@ -19,9 +19,9 @@ import {NgClass, NgForOf} from "@angular/common";
 })
 export class ResultPageComponent {
   cards: { value: number, id: number, route: string }[] = [
-    { value: 0, id: 1, route: '/sublevel1' },
+    { value: 0, id: 1, route: '/challengeOne' },
     { value: 1, id: 2, route: '/componente' },
-    { value: 0, id: 3, route: '/sublevel2' },
+    { value: 0, id: 3, route: '/challengeTwo' },
     { value: 1, id: 4, route: '/component4' },
     { value: 0, id: 5, route: '/component5' },
     { value: 1, id: 6, route: '/component6' },
