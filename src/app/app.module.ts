@@ -36,6 +36,9 @@ import {
   PerformanceSublevelTwoComponent
 } from "./capacityone/components/performance-sublevel-two/performance-sublevel-two.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {QuestionService} from "./capacityone/services/question.service";
+import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
+import {AnswerOptionService} from "./capacityone/services/answer-option.service";
 
 
 
@@ -55,6 +58,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     GooglefontComponent,
     PerformanceSublevelOneComponent,
     PerformanceSublevelTwoComponent,
+    PruebainitComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +74,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     MatButtonModule,
     MatToolbarModule,
   ],
-  providers: [{provide:HttpClientModule, useClass:HttpClientModule},],
+  providers: [QuestionService, AnswerOptionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

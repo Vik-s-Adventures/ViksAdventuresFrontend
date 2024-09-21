@@ -1,0 +1,189 @@
+{
+    "Student":[
+        {
+            "id":1,
+            "firstName":"Leydi",
+            "lastName":"Mamani",
+            "gradeLevel":"Primero",
+            "dateOfBirth":"04/08/2001"
+        },
+        {
+            "id":2,
+            "firstName":"Yaquelin",
+            "lastName":"Aro",
+            "gradeLevel":"Primero",
+            "dateOfBirth":"04/08/2003"
+        }
+    ],
+    "Question":[
+        {
+            "id":1,
+            "skill":1,
+            "questionText":"¿Cuál es el resultado 1",
+            "quizId":1
+        },
+        {
+            "id":2,
+            "questionText":"¿Cuál es el resultado 2",
+            "skill":2,
+            "quizId":1
+        },
+         {
+            "id":3,
+            "questionText":"¿Cuál es el resultado 3",
+            "skill":3,
+            "quizId":1
+         },
+         {
+            "id":4,
+            "questionText":"¿Cuál es el resultado 4",
+            "skill":4,
+            "quizId":1
+         },
+         {
+            "id":5,
+            "questionText":"¿Cuál es el resultado 5",
+            "skill":5,
+            "quizId":1
+         },
+        {
+            "id":6,
+            "questionText":"¿Cuál es el resultado 6",
+            "skill":6,
+            "quizId":1
+        },
+        {
+            "id":7,
+            "questionText":"¿Cuál es el resultado 7",
+            "skill":7,
+            "quizId":1
+        },
+        {
+            "id":8,
+            "questionText":"¿Cuál es el resultado 8",
+            "skill":8,
+            "quizId":1
+        },
+        {
+            "id":9,
+            "questionText":"¿Cuál es el resultado 9",
+            "skill":9,
+            "quizId":1
+        },
+        {
+            "id":10,
+            "questionText":"¿Cuál es el resultado 10",
+            "skill":10,
+            "quizId":1
+        }
+    ],
+    "Quiz":[
+        {
+            "id":1,
+            "title":"Resuelve Problemas de Cantidad",
+            "description":"Descripción de la competencia"
+        }
+    ],
+    "QuizResult":[
+        {
+            "id":1,
+            "studentId":1,
+            "quizId":1,
+            "score": "totalderesponder"
+        },
+        {
+            "id":2,
+            "studentId":1,
+            "quizId":1,
+            "score":20
+        }
+    ],
+    "AnswerOption":[
+        {
+            "id":1,
+            "questionId":1,
+            "answerText":"900 PERSONAS",
+            "correct":1
+        },
+        {
+            "id":2,
+            "questionId":1,
+            "answerText": "1200 PERSONAS",
+            "correct":0
+        },
+        {
+            "id":3,
+            "questionId":1,
+            "answerText":"1600 PERSONAS",
+            "correct":0
+        },
+        {
+            "id":4,
+            "questionId":1,
+            "answerText":"4800 PERSONAS",
+            "correct":0
+        },
+        {
+          "id":5,
+          "questionId":2,
+          "answerText":"900 PERSONAS",
+          "correct":1
+        },
+        {
+          "id":6,
+          "questionId":2,
+          "answerText": "1200 PERSONAS",
+          "correct":0
+        },
+        {
+          "id":7,
+          "questionId":2,
+          "answerText":"1600 PERSONAS",
+          "correct":0
+        },
+        {
+          "id":8,
+          "questionId":2,
+          "answerText":"4800 PERSONAS",
+          "correct":0
+        }
+    ],
+    "StudentResponse":[
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        },
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        },
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        },
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        },
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        },
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        },
+        {
+          "id":1,
+          "studentId":1,
+          "answerOptionId":4
+        }
+    ]
+
+}

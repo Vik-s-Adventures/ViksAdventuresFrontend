@@ -23,10 +23,11 @@ import {
 import {
   PerformanceSublevelTwoComponent
 } from "./capacityone/components/performance-sublevel-two/performance-sublevel-two.component";
+import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'maps', pathMatch:'full'},
-  {path: 'maps', component: PerformanceSublevelTwoComponent},
+  {path: 'maps', component: PruebainitComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
   {path: 'questionOne', component: QuestionOnePageComponent},
   {path: 'questionTwo', component: QuestionTwoPageComponent},

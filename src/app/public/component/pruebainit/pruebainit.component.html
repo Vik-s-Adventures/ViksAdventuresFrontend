@@ -1,0 +1,15 @@
+<span>lol</span>
+<div class="question-container" *ngFor="let question of questions">
+  <mat-card class="question-card">
+    <mat-card-title>Pregunta {{ question.id }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ question.questionText }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="answer-card" *ngFor="let option of getOptionsByQuestionId(question.id)">
+    <mat-card-content>
+      <p>{{ option.answerText }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

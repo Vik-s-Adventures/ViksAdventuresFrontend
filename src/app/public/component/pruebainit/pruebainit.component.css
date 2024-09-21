@@ -1,0 +1,26 @@
+.question-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.question-card {
+  background-color: #e3f2fd;
+  margin-bottom: 10px;
+}
+
+.answer-card {
+  background-color: #fce4ec;
+  margin-left: 20px; /* Alinea las respuestas ligeramente a la derecha de las preguntas */
+  margin-bottom: 5px;
+}
+
+mat-card {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-title {
+  font-weight: bold;
+}
