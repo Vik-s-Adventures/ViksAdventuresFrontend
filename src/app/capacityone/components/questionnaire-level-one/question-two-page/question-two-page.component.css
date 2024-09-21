@@ -1,22 +1,26 @@
 body {
-  background-image: url('https://i.ibb.co/HdJTM7K/principal.png');
+  background-image: url('https://i.ibb.co/tsf859Q/fondoinicio.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  width: 100vw;
   margin: 0;
   padding: 0;
-}
-
-.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Press Start 2P', cursive;
 }
 
 
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 3px 0;
+  align-items: flex-start;
+  font-family: 'Press Start 2P', cursive;
+}
 
 .card-container {
   display: flex;
@@ -25,34 +29,48 @@ body {
   align-items: center;
   padding: 50px;
   z-index: 1;
+  font-family: 'Press Start 2P', cursive;
 }
 
 mat-card {
   width: 700px;
-  height: 250px;
+  height: 500px;
+  justify-content: center;
   margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Press Start 2P', cursive;
 }
 
-.footer {
+
+/* Brillo del botón cuando se selecciona una opción */
+button[mat-button] {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease;
+}
+
+button[mat-button]:disabled {
+  box-shadow: none;
+}
+
+button[mat-button]:not(:disabled) {
+  box-shadow: 0px 0px 15px 2px rgba(0, 123, 255, 0.6);
+}
+
+mat-card-title {
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions {
+  font-family: 'Press Start 2P', cursive;
   display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-}
-
-.button {
-  width: 150px;
-}
-
-.example-radio-group {
-  display: flex;
-  flex-direction: column;
-  margin: 7px 0;
-  align-items: flex-start;
-}
-
-.example-radio-button {
-  margin: 5px;
+  justify-content: center;
+  margin-top: 20px;
 }

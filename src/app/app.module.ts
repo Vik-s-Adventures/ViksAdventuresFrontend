@@ -10,9 +10,7 @@ import {MapsPageComponent} from "./public/component/maps-page/maps-page.componen
 import {
   WelcomeQuestionnairePageComponent
 } from "./public/component/welcome-questionnaire-page/welcome-questionnaire-page.component";
-import {
-  QuestionOnePageComponent
-} from "./capacityone/components/questionnaire-level-one/question-one-page/question-one-page.component";
+
 import {MatCardModule} from "@angular/material/card";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -25,9 +23,6 @@ import {TimeCounterFooterPageComponent} from "./public/component/time-counter-fo
 import {
   QuestionTwoPageComponent
 } from "./capacityone/components/questionnaire-level-one/question-two-page/question-two-page.component";
-import {
-  QuestionThreePageComponent
-} from "./capacityone/components/questionnaire-level-one/question-three-page/question-three-page.component";
 import {GooglefontComponent} from "./public/component/googlefont/googlefont.component";
 import {
   PerformanceSublevelOneComponent
@@ -48,12 +43,10 @@ import {AnswerOptionService} from "./capacityone/services/answer-option.service"
     AppComponent,
     MapsPageComponent,
     WelcomeQuestionnairePageComponent,
-    QuestionOnePageComponent,
     RouteMapPageComponent,
     VickSpriteComponent,
     PruebaspriteComponent,
     QuestionTwoPageComponent,
-    QuestionThreePageComponent,
     TimeCounterFooterPageComponent,
     GooglefontComponent,
     PerformanceSublevelOneComponent,
