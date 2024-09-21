@@ -34,6 +34,12 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {QuestionService} from "./capacityone/services/question.service";
 import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
 import {AnswerOptionService} from "./capacityone/services/answer-option.service";
+import {StudentService} from "./capacityone/services/student.service";
+import {QuizService} from "./capacityone/services/quiz.service";
+import {QuizResultService} from "./capacityone/services/quiz-result.service";
+import {StudentResponseService} from "./capacityone/services/student-response.service";
+import {MenuPageComponent} from "./public/component/menu-page/menu-page.component";
+import {RankingPageComponent} from "./public/component/ranking-page/ranking-page.component";
 
 
 
@@ -51,7 +57,9 @@ import {AnswerOptionService} from "./capacityone/services/answer-option.service"
     GooglefontComponent,
     PerformanceSublevelOneComponent,
     PerformanceSublevelTwoComponent,
-    PruebainitComponent
+    PruebainitComponent,
+    MenuPageComponent,
+    RankingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +75,7 @@ import {AnswerOptionService} from "./capacityone/services/answer-option.service"
     MatButtonModule,
     MatToolbarModule,
   ],
-  providers: [QuestionService, AnswerOptionService],
+  providers: [QuestionService, AnswerOptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

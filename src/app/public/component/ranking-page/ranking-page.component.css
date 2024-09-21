@@ -13,16 +13,6 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-.card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  z-index: 1;
-  font-family: 'Press Start 2P', cursive;
-}
-
 mat-card {
   padding-top: 50px;
   width: 700px;
@@ -37,7 +27,7 @@ mat-card {
 }
 
 mat-card-title {
-  margin: 5px;
+  margin:40px;
   text-align: center;
   font-weight: bold;
   font-family: 'Press Start 2P', cursive;
@@ -45,6 +35,22 @@ mat-card-title {
   align-items: center;
   font-size: 50px;
   color: darkblue;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
 }
 
 .actions {
@@ -58,13 +64,12 @@ mat-card-title {
 
 .actions button {
   font-family: 'Press Start 2P', cursive;
-  margin-bottom: 5px;  /* Espaciado entre botones */
+  margin-bottom: 20px;  /* Espaciado entre botones */
   font-size: 20px;      /* Letra más grande */
   font-weight: bold;    /* Texto en negrita */
   background-color: #f0f0f0; /* Color base de los botones */
-  color: black;      /* Color de las letras inicial */
+  color: darkblue;      /* Color de las letras inicial */
   border: none;
-  width: 100%;          /* Botones ocupan el ancho completo */
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
@@ -74,20 +79,3 @@ mat-card-title {
   box-shadow: 0 0 20px 5px rgba(0, 0, 255, 0.7); /* Efecto de brillo */
 }
 
-.actions button:last-child {
-  margin-bottom: 0;  /* Elimina el margen del último botón */
-}
-button {
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;  /* Centrar el texto */
-  color: darkblue;
-  font-size: 15px;     /* Ajustar el tamaño de la fuente */
-}
-
-.actions h1 {
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;  /* Centrar el texto */
-  color: darkblue;      /* Cambiar color del texto a un azul específico */
-  font-size: 15px;     /* Ajustar el tamaño de la fuente */
-  margin-bottom: 20px; /* Espaciado inferior */
-}

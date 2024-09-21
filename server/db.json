@@ -13,7 +13,21 @@
             "lastName":"Aro",
             "gradeLevel":"Primero",
             "dateOfBirth":"04/08/2003"
-        }
+        },
+        {
+            "id":3,
+            "firstName":"Shayla",
+            "lastName":"Choque",
+            "gradeLevel":"Primero",
+            "dateOfBirth":"04/08/2003"
+        },
+          {
+            "id":4,
+            "firstName":"Lussiné",
+            "lastName":"Puma",
+            "gradeLevel":"Primero",
+            "dateOfBirth":"04/08/2003"
+          }
     ],
     "Question":[
         {
@@ -93,9 +107,21 @@
         },
         {
             "id":2,
-            "studentId":1,
+            "studentId":2,
             "quizId":1,
-            "score":20
+            "score":80
+        },
+        {
+            "id":3,
+            "studentId":3,
+            "quizId":1,
+            "score": 99
+        },
+        {
+            "id":4,
+            "studentId":4,
+            "quizId":1,
+            "score":90
         }
     ],
     "AnswerOption":[
@@ -185,5 +211,4 @@
           "answerOptionId":4
         }
     ]
-
 }
