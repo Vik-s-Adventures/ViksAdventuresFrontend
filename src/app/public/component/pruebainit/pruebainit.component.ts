@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Question} from "../../../capacityone/model/Question";
-import {AnswerOption} from "../../../capacityone/model/AnswerOption";
-import {QuestionService} from "../../../capacityone/services/question.service";
-import {AnswerOptionService} from "../../../capacityone/services/answer-option.service";
+import {Question} from "../../../first-competence/model/Question";
+import {AnswerOption} from "../../../first-competence/model/AnswerOption";
+import {QuestionService} from "../../../first-competence/services/question.service";
+import {AnswerOptionService} from "../../../first-competence/services/answer-option.service";
 
 
 @Component({

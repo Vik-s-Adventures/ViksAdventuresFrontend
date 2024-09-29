@@ -1,13 +1,12 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import * as Phaser from 'phaser';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-welcome-questionnaire-page',
-  templateUrl: './welcome-questionnaire-page.component.html',
-  styleUrls: ['./welcome-questionnaire-page.component.css']
+  selector: 'app-level-two-instruction',
+  templateUrl: './level-two-instruction.component.html',
+  styleUrl: './level-two-instruction.component.css'
 })
-export class WelcomeQuestionnairePageComponent implements OnInit{
+export class LevelTwoInstructionComponent implements OnInit{
 
   phaserGame!: Phaser.Game;
   config!: Phaser.Types.Core.GameConfig;
@@ -37,7 +36,7 @@ export class WelcomeQuestionnairePageComponent implements OnInit{
 
   preload() {
     // Cargar el sprite (ajusta la ruta a tu imagen de sprites)
-    this.load.spritesheet('character', 'assets/images/adelantesprite.png', {
+    this.load.spritesheet('character', 'assets/images/spritederecha.png', {
       frameWidth: 500,
       frameHeight: 500
     });
@@ -63,6 +62,6 @@ export class WelcomeQuestionnairePageComponent implements OnInit{
 
   continueAction(): void {
     // Redirige a otro componente usando el Router
-    this.router.navigate(['/questionnaire']); // Cambia '/another' por la ruta deseada
+    this.router.navigate(['/twoInstruction']); // Cambia '/another' por la ruta deseada
   }
 }

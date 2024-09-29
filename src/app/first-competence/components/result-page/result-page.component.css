@@ -13,6 +13,16 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+/* Estilos para el título dentro de las tarjetas circulares */
+.circle-title {
+  color: white; /* Cambia este color si lo necesitas */
+  font-size: 14px; /* Tamaño de fuente */
+  text-align: center; /* Alineación central */
+  padding: 5px;
+  line-height: 1.2; /* Asegura que el texto se mantenga centrado incluso en varias líneas */
+}
+
+
 /* Estilos del contenedor principal */
 .main-card {
   width: 600px;
@@ -57,7 +67,8 @@ body {
 
 /* Color amarillo con opacidad 80% */
 .yellow-circle {
-  background-color: rgba(255, 255, 0, 0.8);
+  background-color: rgba(70, 130, 180, 0.8);
+
 }
 
 /* Animación para que el círculo gire sobre su eje */
@@ -72,4 +83,32 @@ body {
   transform: scale(1.1);  /* Aumentar tamaño al hacer hover */
   background-color: #00f;  /* Cambiar a azul oscuro al pasar el cursor */
 }
+/* Contenedor del sprite */
+sprite-container {
+  position: absolute;
+  bottom: 50px;
+  left: 10px; /* Puedes ajustar esta posición según lo que necesites */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+sprite img {
+  width: 64px; /* Ajusta el tamaño del sprite */
+  height: 64px;
+  animation: moveInPlace 1s steps(4) infinite; /* Animación para moverse en el sitio */
+}
+
+
+
+/* Cuadro de diálogo encima del sprite */
+.dialog-box {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

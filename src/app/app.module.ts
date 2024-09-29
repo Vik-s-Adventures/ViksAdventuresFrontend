@@ -14,7 +14,7 @@ import {
 import {MatCardModule} from "@angular/material/card";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {RouteMapPageComponent} from "./capacityone/components/route-map-page/route-map-page.component";
+import {RouteMapPageComponent} from "./first-competence/components/route-map-page/route-map-page.component";
 import {VickSpriteComponent} from "./public/component/vick-sprite/vick-sprite.component";
 import {PruebaspriteComponent} from "./public/component/pruebasprite/pruebasprite.component";
 import {MatRadioModule} from "@angular/material/radio";
@@ -22,68 +22,91 @@ import {MatButtonModule} from "@angular/material/button";
 import {TimeCounterFooterPageComponent} from "./public/component/time-counter-footer-page/time-counter-footer-page.component";
 import {
   QuestionTwoPageComponent
-} from "./capacityone/components/questionnaire-level-one/question-two-page/question-two-page.component";
+} from "./first-competence/components/questionnaire-level-one/question-two-page/question-two-page.component";
 import {GooglefontComponent} from "./public/component/googlefont/googlefont.component";
 import {
   PerformanceSublevelOneComponent
-} from "./capacityone/components/perfomance/performance-sublevel-one/performance-sublevel-one.component";
+} from "./first-competence/components/perfomance/performance-sublevel-one/performance-sublevel-one.component";
 import {
   PerformanceSublevelTwoComponent
-} from "./capacityone/components/perfomance/performance-sublevel-two/performance-sublevel-two.component";
+} from "./first-competence/components/perfomance/performance-sublevel-two/performance-sublevel-two.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {QuestionService} from "./capacityone/services/question.service";
+import {QuestionService} from "./first-competence/services/question.service";
 import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
-import {AnswerOptionService} from "./capacityone/services/answer-option.service";
+import {AnswerOptionService} from "./first-competence/services/answer-option.service";
 import {StudentService} from "./profile/services/student.service";
-import {QuizService} from "./capacityone/services/quiz.service";
-import {QuizResultService} from "./capacityone/services/quiz-result.service";
-import {StudentResponseService} from "./capacityone/services/student-response.service";
+import {QuizService} from "./first-competence/services/quiz.service";
+import {QuizResultService} from "./first-competence/services/quiz-result.service";
+import {StudentResponseService} from "./first-competence/services/student-response.service";
 import {MenuPageComponent} from "./public/component/menu-page/menu-page.component";
 import {RankingPageComponent} from "./public/component/ranking-page/ranking-page.component";
 import {ProfilePageComponent} from "./profile/components/profile-page/profile-page.component";
-import {ChallengesOneComponent} from "./capacityone/components/challenges/challenges-one/challenges-one.component";
-import {ChallengesTwoComponent} from "./capacityone/components/challenges/challenges-two/challenges-two.component";
+import {ChallengesOneComponent} from "./first-competence/components/challenges/challenges-one/challenges-one.component";
+import {ChallengesTwoComponent} from "./first-competence/components/challenges/challenges-two/challenges-two.component";
 import {HeaderPageComponent} from "./public/component/header-page/header-page.component";
+import {ResultPageComponent} from "./first-competence/components/result-page/result-page.component";
+import {
+  LevelOneInstructionComponent
+} from "./first-competence/performance-modules/level-one-instruction/level-one-instruction.component";
+
+import {
+  OneInstructionComponent
+} from "./first-competence/performance-modules/one-instruction/one-instruction.component";
+import {
+  TwoInstructionComponent
+} from "./first-competence/performance-modules/two-instruction/two-instruction.component";
+import {
+  LevelTwoInstructionComponent
+} from "./first-competence/performance-modules/level-two-instruction/level-two-instruction.component";
 
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MapsPageComponent,
-    WelcomeQuestionnairePageComponent,
-    RouteMapPageComponent,
-    VickSpriteComponent,
-    PruebaspriteComponent,
-    QuestionTwoPageComponent,
-    TimeCounterFooterPageComponent,
-    GooglefontComponent,
-    PerformanceSublevelOneComponent,
-    PerformanceSublevelTwoComponent,
-    PruebainitComponent,
-    MenuPageComponent,
-    RankingPageComponent,
-    ProfilePageComponent,
-    ChallengesOneComponent,
-    ChallengesTwoComponent,
-    HeaderPageComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    RouterOutlet,
-    MatCardModule,
-    MatCheckboxModule,
-    ReactiveFormsModule,
-    MatRadioModule,
-    FormsModule,
-    MatButtonModule,
-    MatToolbarModule,
-  ],
-  providers: [QuestionService, AnswerOptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MapsPageComponent,
+        WelcomeQuestionnairePageComponent,
+        RouteMapPageComponent,
+        VickSpriteComponent,
+        PruebaspriteComponent,
+        QuestionTwoPageComponent,
+        TimeCounterFooterPageComponent,
+        GooglefontComponent,
+        PerformanceSublevelOneComponent,
+        PerformanceSublevelTwoComponent,
+        PruebainitComponent,
+        MenuPageComponent,
+        RankingPageComponent,
+        ProfilePageComponent,
+        ChallengesOneComponent,
+        ChallengesTwoComponent,
+        HeaderPageComponent,
+        ResultPageComponent,
+        LevelOneInstructionComponent,
+        OneInstructionComponent,
+        TwoInstructionComponent,
+        LevelTwoInstructionComponent
+
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        RouterOutlet,
+        MatCardModule,
+        MatCheckboxModule,
+        ReactiveFormsModule,
+        MatRadioModule,
+        FormsModule,
+        MatButtonModule,
+        MatToolbarModule,
+    ],
+    providers: [QuestionService, AnswerOptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
+    exports: [
+        HeaderPageComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

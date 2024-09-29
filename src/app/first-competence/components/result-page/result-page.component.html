@@ -1,0 +1,25 @@
+<app-header-page></app-header-page>
+<body>
+<mat-card class="main-card">
+  <div class="circle-container">
+    <div *ngFor="let card of cards"
+         [ngClass]="{'red-circle': card.value === 0, 'yellow-circle': card.value === 1}"
+         class="circle-card"
+         (click)="onCardSelect(card.id)">
+      <!-- Título dentro de la tarjeta circular -->
+      <span class="circle-title">{{ card.title }}</span>
+    </div>
+  </div>
+</mat-card>
+
+<!-- Sección donde se coloca el sprite con un cuadro de diálogo -->
+<div class="sprite-container">
+  <div class="sprite">
+    <div class="dialog-box">¡Hola! Esta es tu ruta de aprendizaje</div>
+    <div class="dialog-box">Elige un nivel de color rojo</div>
+    <div class="dialog-box">Si necesitas ayuda presiona "DESAFIO"</div>
+    <img src="../../../../assets/images/sprite4.png" alt="sprite">
+    <!-- Cuadro de diálogo sobre la cabeza -->
+  </div>
+</div>
+</body>

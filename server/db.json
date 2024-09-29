@@ -2,29 +2,29 @@
     "Student":[
         {
             "id":1,
-            "firstName":"Leydi",
-            "lastName":"Mamani",
+            "firstName":"Luana",
+            "lastName":"Vasquez",
             "gradeLevel":"Primero",
             "dateOfBirth":"04/08/2001"
         },
         {
             "id":2,
-            "firstName":"Yaquelin",
-            "lastName":"Aro",
+            "firstName":"Idana",
+            "lastName":"Carrera",
             "gradeLevel":"Primero",
             "dateOfBirth":"04/08/2003"
         },
         {
             "id":3,
-            "firstName":"Shayla",
-            "lastName":"Choque",
+            "firstName":"Alex",
+            "lastName":"Flores",
             "gradeLevel":"Primero",
             "dateOfBirth":"04/08/2003"
         },
           {
             "id":4,
-            "firstName":"Lussiné",
-            "lastName":"Puma",
+            "firstName":"Jorge",
+            "lastName":"Rodriguez",
             "gradeLevel":"Primero",
             "dateOfBirth":"04/08/2003"
           }
@@ -33,13 +33,55 @@
         {
             "id":1,
             "skill":1,
-            "questionText":"¿Cuál es el resultado 1",
+            "questionText":"Pedro compró cierta cantidad de panes. Puso de esta cantidad sobre una bandeja y dejó el resto en la bolsa. ¿Cuántos panes dejó Pedro en la bolsa? ",
             "quizId":1
         },
         {
             "id":2,
-            "questionText":"¿Cuál es el resultado 2",
+            "questionText":"En el coliseo de una ciudad, se jugó la final de un campeonato de vóley. En total, 1 200 personas asistieron al coliseo. Esta cantidad de personas representa a los de su capacidad. ¿Cuál es la capacidad que tiene este coliseo?",
             "skill":2,
+            "quizId":1
+        },
+        {
+            "id":3,
+            "skill":3,
+            "questionText":"Se quiere saber la longitud de este tornillo usando la longitud de la regla como unidad. Observa.Según la imagen, ¿cuál es la medida del tornillo?",
+            "quizId":1
+        },
+        {
+            "id":4,
+            "skill":4,
+            "questionText":"La masa de una pastilla suele expresarse en gramos (g) o miligramos (mg). Observa. ¿A cuántos gramos equivale la masa de la pastilla mostrada?",
+            "quizId":1
+        },
+        {
+            "id":5,
+            "skill":5,
+            "questionText":"María tiene dos tipos de envases para almacenar los huevos que recoge de su granja. Observa. Esta mañana, María recogió de su granja entre 70 y 100 huevos. Todos estos huevos pueden almacenarse en cualquiera de estos dos tipos de envase. En ninguno de los dos casos sobran ni faltan huevos. Si ella decide usar solo uno de estos tipos de envases, ¿cuántos huevos recogió María esta mañana?",
+            "quizId":1
+        },
+        {
+            "id":6,
+            "skill":6,
+            "questionText":"Flor ha colocado 1 kg de papa sobre su balanza. Si un cliente le quiere comprar 2 kg de papa, ¿cuántos kilogramos (kg) de papa debe agregar Flor sobre la balanza para cumplir con el pedido?",
+            "quizId":1
+        },
+        {
+            "id":7,
+            "skill":7,
+            "questionText":"La siguiente imagen, nos muestra algunas recomendaciones para cuidar nuestra espalda al llevar una mochila. Observa. Si un niño tiene una masa corporal de 40 kilogramos (kg), ¿cuántos kilogramos debe llevar, como máximo, en su mochila?",
+            "quizId":1
+        },
+        {
+            "id":8,
+            "skill":8,
+            "questionText":"Un grifo ofrece distintos tipos de gasolina a los siguientes precios. Teresa abastece su camioneta de combustible comprando 6 galones de gasolina tipo B. Si paga con S/100, ¿cuánto recibirá de vuelto? ",
+            "quizId":1
+        },
+        {
+            "id":9,
+            "skill":9,
+            "questionText":"Lucía y su familia van al circo. Al sacar sus cuentas, ella observa que: Si compra 2 entradas y dos manzanas acarameladas pagaría 20 soles. Pero si compra 3 entradas y una manzana acaramelada pagaría 26. Según esto, ¿cuánto pagaría por 3 manzanas y una entrada?",
             "quizId":1
         }
     ],
@@ -80,25 +122,25 @@
         {
             "id":1,
             "questionId":1,
-            "answerText":"900 PERSONAS",
+            "answerText":"3 panes.",
             "correct":1
         },
         {
             "id":2,
             "questionId":1,
-            "answerText": "1200 PERSONAS",
+            "answerText": "6 panes.",
             "correct":0
         },
         {
             "id":3,
             "questionId":1,
-            "answerText":"1600 PERSONAS",
+            "answerText":"9 panes",
             "correct":0
         },
         {
             "id":4,
             "questionId":1,
-            "answerText":"4800 PERSONAS",
+            "answerText":"12 panes",
             "correct":0
         },
         {
@@ -124,7 +166,175 @@
           "questionId":2,
           "answerText":"4800 PERSONAS",
           "correct":0
-        }
+        },
+      {
+        "id":9,
+        "questionId":3,
+        "answerText":"5/7 de la regla.",
+        "correct":1
+      },
+      {
+        "id":10,
+        "questionId":3,
+        "answerText": "4/7 de la regla.",
+        "correct":0
+      },
+      {
+        "id":11,
+        "questionId":3,
+        "answerText":"4/8 de la regla",
+        "correct":0
+      },
+      {
+        "id":12,
+        "questionId":3,
+        "answerText":"5/8 de la regla",
+        "correct":0
+      },
+      {
+        "id":13,
+        "questionId":4,
+        "answerText":"0,325 gramos",
+        "correct":1
+      },
+      {
+        "id":14,
+        "questionId":4,
+        "answerText": "3,25 gramos",
+        "correct":0
+      },
+      {
+        "id":15,
+        "questionId":4,
+        "answerText":"32,5 gramos",
+        "correct":0
+      },
+      {
+        "id":16,
+        "questionId":4,
+        "answerText":"325 gramos",
+        "correct":0
+      },
+      {
+        "id":17,
+        "questionId":5,
+        "answerText":"70 huevos. ",
+        "correct":1
+      },
+      {
+        "id":18,
+        "questionId":5,
+        "answerText": "80 huevos. ",
+        "correct":0
+      },
+      {
+        "id":19,
+        "questionId":5,
+        "answerText":"90 huevos. ",
+        "correct":0
+      },
+      {
+        "id":20,
+        "questionId":5,
+        "answerText":"100 huevos. ",
+        "correct":0
+      },
+      {
+        "id":21,
+        "questionId":6,
+        "answerText":"3/4 kg de papa.",
+        "correct":1
+      },
+      {
+        "id":22,
+        "questionId":6,
+        "answerText": "1 3/4 kg de papa.",
+        "correct":0
+      },
+      {
+        "id":23,
+        "questionId":6,
+        "answerText":"1/4 kg de papa.",
+        "correct":0
+      },
+      {
+        "id":24,
+        "questionId":6,
+        "answerText":"1 1/4 kg de papa.",
+        "correct":0
+      },
+      {
+        "id":25,
+        "questionId":7,
+        "answerText":"4 kg",
+        "correct":1
+      },
+      {
+        "id":26,
+        "questionId":7,
+        "answerText": "6 kg",
+        "correct":0
+      },
+      {
+        "id":27,
+        "questionId":7,
+        "answerText":"15 kg",
+        "correct":0
+      },
+      {
+        "id":28,
+        "questionId":7,
+        "answerText":"25 kg",
+        "correct":0
+      },
+      {
+        "id":29,
+        "questionId":8,
+        "answerText":"S/37,50",
+        "correct":1
+      },
+      {
+        "id":30,
+        "questionId":8,
+        "answerText": "S/28,50",
+        "correct":0
+      },
+      {
+        "id":31,
+        "questionId":8,
+        "answerText":"S/22,50",
+        "correct":0
+      },
+      {
+        "id":32,
+        "questionId":8,
+        "answerText":"S/17,50",
+        "correct":0
+      },
+      {
+        "id":33,
+        "questionId":9,
+        "answerText":"10 soles",
+        "correct":1
+      },
+      {
+        "id":34,
+        "questionId":9,
+        "answerText": "12 soles",
+        "correct":0
+      },
+      {
+        "id":35,
+        "questionId":9,
+        "answerText":"14 soles",
+        "correct":0
+      },
+      {
+        "id":36,
+        "questionId":9,
+        "answerText":"16 soles",
+        "correct":0
+      }
     ],
     "StudentResponse":[
         {

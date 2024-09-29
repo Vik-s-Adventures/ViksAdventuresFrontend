@@ -26,9 +26,9 @@ body, html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: 'Press Start 2P', cursive; /* Aplicar la fuente */
-  font-size: 1.3rem; /* Tamaño de letra más grande */
+  font-size: 1rem; /* Tamaño de letra más grande */
   font-weight: bold; /* Texto más grueso */
-  max-width: 500px; /* Limita el ancho de la card */
+  max-width: 300px; /* Limita el ancho de la card */
   word-wrap: break-word; /* Hace que el texto no se desborde */
   animation: textMovement 1.5s infinite; /* Animación de movimiento de letras */
 }
@@ -91,4 +91,3 @@ body, html {
     font-size: 0.9rem; /* Ajustar el botón en móviles */
   }
 }
-

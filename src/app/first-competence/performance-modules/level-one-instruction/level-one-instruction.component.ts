@@ -1,13 +1,12 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import * as Phaser from 'phaser';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-welcome-questionnaire-page',
-  templateUrl: './welcome-questionnaire-page.component.html',
-  styleUrls: ['./welcome-questionnaire-page.component.css']
+  selector: 'app-level-one-instruction',
+  templateUrl: './level-one-instruction.component.html',
+  styleUrl: './level-one-instruction.component.css'
 })
-export class WelcomeQuestionnairePageComponent implements OnInit{
+export class LevelOneInstructionComponent implements OnInit{
 
   phaserGame!: Phaser.Game;
   config!: Phaser.Types.Core.GameConfig;
@@ -63,6 +62,6 @@ export class WelcomeQuestionnairePageComponent implements OnInit{
 
   continueAction(): void {
     // Redirige a otro componente usando el Router
-    this.router.navigate(['/questionnaire']); // Cambia '/another' por la ruta deseada
+    this.router.navigate(['/oneInstruction']); // Cambia '/another' por la ruta deseada
   }
 }

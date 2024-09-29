@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Evita las barras de desplazamiento */
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background-image: url('src/assets/images/fondoinicio.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+}
+
+/* Botones de navegación en la parte superior */
+.button-container {
+  position: absolute;
+  top: 20px;
+  left: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.nav-button {
+  background-color: #03A9F4; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase; /* Letras en mayúsculas */
+}
+
+.nav-button:hover {
+  background-color: #FFD700; /* Cambia a color amarillo al pasar el cursor */
+  box-shadow: 0 0 15px #FFD700; /* Brillo alrededor del botón */
+}
+
+/* Contenedor de las cards, alineadas en columna */
+.card-container {
+  display: flex;
+  flex-direction: column; /* Las cards estarán alineadas en columna */
+  align-items: center;
+  gap: 20px; /* Espacio entre las cards */
+}
+
+/* Estilos para las cards de diálogo y ejemplos */
+.dialog-card, .example-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem; /* Ajuste de tamaño de texto */
+  font-weight: bold;
+  max-width: 400px;
+  width: 100%;
+  word-wrap: break-word;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+.example-card img {
+  max-width: 100%; /* Ajustar el tamaño de la imagen */
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Estilo de la flecha */
+.arrow {
+  width: 50px;
+  height: 50px;
+  background-color: #03A9F4; /* Color celeste para la flecha */
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%); /* Forma de flecha */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+.arrow:hover {
+  background-color: #FFD700; /* Cambia a color amarillo al pasar el cursor */
+  box-shadow: 0 0 15px #FFD700; /* Brillo alrededor de la flecha */
+}
+
+/* Estilo de la flecha apuntando hacia la izquierda */
+.arrow-left {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff; /* Color blanco de fondo */
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%); /* Forma de flecha hacia la izquierda */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+.arrow-left:hover {
+  background-color: #FFD700; /* Cambia a color amarillo al pasar el cursor */
+  box-shadow: 0 0 15px #FFD700; /* Brillo alrededor de la flecha */
+}
+
+/* Título grande en el primer diálogo */
+.dynamic-title {
+  font-size: 3rem;
+  color: #FFD700;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive; /* Tipo de letra */
+  text-transform: uppercase; /* Título en mayúsculas */
+  animation: moveTitle 3s infinite alternate;
+}
+
+/* Título dinámico para los subtemas */
+.dynamic-title-small {
+  font-size: 2rem;
+  color: #FFD700;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive; /* Tipo de letra */
+  text-transform: uppercase; /* Títulos en mayúsculas */
+  animation: moveTitleSmall 3s infinite alternate;
+  text-shadow: 0px 0px 10px #FFD700, 0px 0px 20px #FFD700;
+}
+
+/* Animación para el título grande */
+@keyframes moveTitle {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+/* Animación para los títulos pequeños */
+@keyframes moveTitleSmall {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+/* Estilo del botón "Recuerda" */
+button {
+  background-color: #03A9F4; /* Fondo celeste */
+  color: #000000; /* Texto negro */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase; /* Letras en mayúsculas */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+button:hover {
+  background-color: #FFD700; /* Cambia a color amarillo al pasar el cursor */
+  color: #000000; /* Asegura que el texto siga siendo negro */
+  box-shadow: 0 0 15px #FFD700; /* Brillo alrededor del botón */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .dialog-card {
+    font-size: 1rem; /* Tamaño más pequeño para pantallas medianas */
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  .arrow, .arrow-left {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dialog-card {
+    font-size: 0.9rem; /* Tamaño más pequeño para móviles */
+    padding: 10px;
+    max-width: 250px;
+  }
+
+  .arrow, .arrow-left {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dynamic-title {
+    font-size: 2.5rem; /* Reduce tamaño para móviles */
+  }
+
+  .dynamic-title-small {
+    font-size: 1.5rem; /* Reduce tamaño para móviles */
+  }
+
+  .nav-button {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}
