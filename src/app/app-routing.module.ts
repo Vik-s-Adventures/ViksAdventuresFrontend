@@ -18,7 +18,7 @@ import {ChallengesOneComponent} from "./first-competence/components/challenges/c
 import {ChallengesTwoComponent} from "./first-competence/components/challenges/challenges-two/challenges-two.component";
 import {
   LevelOneInstructionComponent
-} from "./first-competence/performance-modules/level-one-instruction/level-one-instruction.component";
+} from "./first-competence/performance-modules/dialogue-instruction/level-one-instruction/level-one-instruction.component";
 
 import {
   OneInstructionComponent
@@ -28,7 +28,25 @@ import {
 } from "./first-competence/performance-modules/two-instruction/two-instruction.component";
 import {
   LevelTwoInstructionComponent
-} from "./first-competence/performance-modules/level-two-instruction/level-two-instruction.component";
+} from "./first-competence/performance-modules/dialogue-instruction/level-two-instruction/level-two-instruction.component";
+import {
+  ThreeInstructionComponent
+} from "./first-competence/performance-modules/three-instruction/three-instruction.component";
+import {
+  FourInstructionComponent
+} from "./first-competence/performance-modules/four-instruction/four-instruction.component";
+import {
+  PerformanceSublevelThreeComponent
+} from "./first-competence/components/perfomance/performance-sublevel-three/performance-sublevel-three.component";
+import {
+  FiveInstructionComponent
+} from "./first-competence/performance-modules/five-instruction/five-instruction.component";
+import {
+  SixInstructionComponent
+} from "./first-competence/performance-modules/six-instruction/six-instruction.component";
+import {
+  SevenInstructionComponent
+} from "./first-competence/performance-modules/seven-instruction/seven-instruction.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'menu', pathMatch:'full'},
@@ -43,12 +61,18 @@ const routes: Routes = [
   {path: 'result', component: ResultPageComponent},
   {path: 'sublevel1', component: PerformanceSublevelOneComponent},
   {path: 'sublevel2', component: PerformanceSublevelTwoComponent},
+  {path: 'sublevel3', component: PerformanceSublevelThreeComponent},
   {path: 'challengeOne', component: ChallengesOneComponent},
   {path: 'challengeTwo', component: ChallengesTwoComponent},
   {path: 'instructionOne', component: LevelOneInstructionComponent},
   {path: 'instructionTwo', component: LevelTwoInstructionComponent},
   {path: 'oneInstruction', component: OneInstructionComponent},
   {path: 'twoInstruction', component: TwoInstructionComponent},
+  {path: 'threeInstruction', component: ThreeInstructionComponent},
+  {path: 'fourInstruction', component: FourInstructionComponent},
+  {path: 'fiveInstruction', component: FiveInstructionComponent},
+  {path: 'sixInstruction', component: SixInstructionComponent},
+  {path: 'sevenInstruction', component: SevenInstructionComponent},
 
 ];
 

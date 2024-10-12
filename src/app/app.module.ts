@@ -47,7 +47,7 @@ import {HeaderPageComponent} from "./public/component/header-page/header-page.co
 import {ResultPageComponent} from "./first-competence/components/result-page/result-page.component";
 import {
   LevelOneInstructionComponent
-} from "./first-competence/performance-modules/level-one-instruction/level-one-instruction.component";
+} from "./first-competence/performance-modules/dialogue-instruction/level-one-instruction/level-one-instruction.component";
 
 import {
   OneInstructionComponent
@@ -57,7 +57,37 @@ import {
 } from "./first-competence/performance-modules/two-instruction/two-instruction.component";
 import {
   LevelTwoInstructionComponent
-} from "./first-competence/performance-modules/level-two-instruction/level-two-instruction.component";
+} from "./first-competence/performance-modules/dialogue-instruction/level-two-instruction/level-two-instruction.component";
+import {
+  ThreeInstructionComponent
+} from "./first-competence/performance-modules/three-instruction/three-instruction.component";
+import {
+  FourInstructionComponent
+} from "./first-competence/performance-modules/four-instruction/four-instruction.component";
+import {
+  PerformanceSublevelThreeComponent
+} from "./first-competence/components/perfomance/performance-sublevel-three/performance-sublevel-three.component";
+import {
+  FiveInstructionComponent
+} from "./first-competence/performance-modules/five-instruction/five-instruction.component";
+import {
+  SixInstructionComponent
+} from "./first-competence/performance-modules/six-instruction/six-instruction.component";
+import {
+  LevelFiveInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-five-instruction/level-five-instruction.component";
+import {
+  LevelFourInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-four-instruction/level-four-instruction.component";
+import {
+  LevelSevenInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-seven-instruction/level-seven-instruction.component";
+import {
+  LevelSixInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-six-instruction/level-six-instruction.component";
+import {
+  LevelThreeInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-three-instruction/level-three-instruction.component";
 
 
 
@@ -86,8 +116,17 @@ import {
         LevelOneInstructionComponent,
         OneInstructionComponent,
         TwoInstructionComponent,
-        LevelTwoInstructionComponent
-
+        LevelTwoInstructionComponent,
+        ThreeInstructionComponent,
+        FourInstructionComponent,
+        PerformanceSublevelThreeComponent,
+        FiveInstructionComponent,
+        SixInstructionComponent,
+      LevelFiveInstructionComponent,
+      LevelFourInstructionComponent,
+      LevelSevenInstructionComponent,
+      LevelSixInstructionComponent,
+      LevelThreeInstructionComponent,
     ],
     imports: [
         BrowserModule,

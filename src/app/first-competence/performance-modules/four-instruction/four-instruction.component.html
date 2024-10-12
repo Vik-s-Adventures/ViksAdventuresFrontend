@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="button-container">
+    <button class="nav-button" (click)="navigateToComponent1()">MENU</button>
+    <button class="nav-button" (click)="navigateToComponent2()">TU RUTA</button>
+  </div>
+
+  <!-- Sprite a la izquierda -->
+  <div id="phaser-container"></div>
+
+  <!-- Contenedor de las cards, alineadas en columna -->
+  <div class="card-container">
+
+    <!-- Título grande en el primer diálogo -->
+    <div class="title" *ngIf="currentCard === 0">
+      <h1 class="dynamic-title">DIVISIBILIDAD Y</h1>
+      <h1 class="dynamic-title">MÚLTIPLOS</h1>
+    </div>
+
+    <!-- Card de presentación del tema -->
+    <div class="dialog-card" *ngIf="currentCard === 0">
+      <p>Hoy aprenderemos sobre divisibilidad y múltiplos. Estos conceptos son fundamentales en matemáticas para entender cómo se relacionan los números.</p>
+    </div>
+
+    <!-- Card explicando divisibilidad -->
+    <div class="title" *ngIf="currentCard === 1">
+      <h2 class="dynamic-title-small">DIVISIBILIDAD</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 1">
+      <p>La divisibilidad es la capacidad de un número para dividirse por otro sin dejar residuo.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 1">
+      <p>Por ejemplo: 12 es divisible por 3, ya que 12 ÷ 3 = 4.</p>
+    </div>
+
+    <!-- Card explicando los múltiplos -->
+    <div class="title" *ngIf="currentCard === 2">
+      <h2 class="dynamic-title-small">MÚLTIPLOS</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 2">
+      <p>Un múltiplo de un número es el resultado de multiplicarlo por un número entero.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 2">
+      <p>Por ejemplo: los múltiplos de 4 son: 4, 8, 12, 16, etc</p>
+    </div>
+
+    <!-- Card explicando el MCD -->
+    <div class="title" *ngIf="currentCard === 3">
+      <h2 class="dynamic-title-small">MÁXIMO COMÚN DIVISOR</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 3">
+      <p>El MCD de dos o más números es el mayor número que los divide exactamente. Ejemplo: el MCD de 12 y 16 es 4.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 3">
+      <img src="assets/images/mcd.PNG" alt="Ejemplo de MCD">
+    </div>
+
+    <!-- Card explicando el MCM -->
+    <div class="title" *ngIf="currentCard === 4">
+      <h2 class="dynamic-title-small">MÍNIMO COMÚN MÚLTIPLO</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 4">
+      <p>El MCM de dos números es el menor múltiplo que ambos comparten. Ejemplo: el MCM de 3 y 5 es 15.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 4">
+      <img src="assets/images/mcm.PNG" alt="Ejemplo de MCM">
+    </div>
+
+    <!-- Sección de fórmulas importantes -->
+    <div class="title" *ngIf="currentCard === 5">
+      <h2 class="dynamic-title-small">CRITERIOS</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 5">
+      <p>Un número es divisible si . . .</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 5">
+      <img src="assets/images/criterios.PNG" alt="Ejemplo de MCM">
+    </div>
+
+    <!-- Card explicando los consejos útiles -->
+    <div class="title" *ngIf="currentCard === 6">
+      <h2 class="dynamic-title-small">CONSEJOS</h2>
+    </div>
+    <div class="dialog-card small-text" *ngIf="currentCard === 6">
+      <p>- Usa los criterios de divisibilidad para facilitar la resolución de problemas.</p>
+      <p>- Estima tus respuestas antes de hacer cálculos exactos para verificar tus resultados.</p>
+    </div>
+
+    <!-- Card final con el botón "Recuerda" -->
+    <div class="dialog-card" *ngIf="currentCard === 7">
+      <p>¡Eso es todo! Recuerda practicar los conceptos de divisibilidad y múltiplos para mejorar tu habilidad en matemáticas.</p>
+      <button (click)="goToRemember()">CONTINUEMOS</button>
+    </div>
+
+  </div> <!-- Fin del contenedor de las cards -->
+
+  <!-- Footer con las flechas centradas -->
+  <footer class="footer-container">
+    <div class="arrow-left" *ngIf="currentCard > 0" (click)="previousCard()"></div>
+    <div class="arrow" *ngIf="currentCard < 7" (click)="nextCard()"></div>
+  </footer>
+
+</div>
+
