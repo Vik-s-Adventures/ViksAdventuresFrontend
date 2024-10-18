@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Question} from "../../../first-competence/model/Question";
-import {AnswerOption} from "../../../first-competence/model/AnswerOption";
+import {Option} from "../../../first-competence/model/Option";
 import {QuestionService} from "../../../first-competence/services/question.service";
 import {AnswerOptionService} from "../../../first-competence/services/answer-option.service";
 
@@ -13,10 +13,10 @@ import {AnswerOptionService} from "../../../first-competence/services/answer-opt
 
 export class PruebainitComponent implements OnInit {
   questions: Question[] = [];
-  answerOptions: AnswerOption[] = [];
+  answerOptions: Option[] = [];
   currentQuestionIndex: number = 0;
   currentQuestion!: Question;
-  selectedAnswer: AnswerOption | null = null;
+  selectedAnswer: Option | null = null;
 
   constructor(
     private questionService: QuestionService,
@@ -45,7 +45,7 @@ export class PruebainitComponent implements OnInit {
     this.answerOptionService.getAnswerQuestions().subscribe({
       complete(): void {
       },
-      next: (data: AnswerOption[]) => {
+      next: (data: Option[]) => {
         this.answerOptions = data;
       },
       error: (error) => {
@@ -55,7 +55,7 @@ export class PruebainitComponent implements OnInit {
   }
 
   // Método para obtener las respuestas filtradas por el ID de la pregunta
-  getOptionsByQuestionId(questionId: number): AnswerOption[] {
+  getOptionsByQuestionId(questionId: number): Option[] {
     return this.answerOptions.filter(option => option.questionId === questionId);
   }
 

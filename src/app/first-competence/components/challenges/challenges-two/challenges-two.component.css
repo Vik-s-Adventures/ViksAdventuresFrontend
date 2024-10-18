@@ -16,7 +16,6 @@ body {
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: stretch;;
   padding: 50px;
   z-index: 1;
@@ -34,24 +33,36 @@ mat-card {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.footer {
+.footer-container {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 20px;
+  justify-content: center;
+  gap: 20px;
 }
+
+.footer-button {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #B2EBF2;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #FFD700;
+  box-shadow: 0 0 10px #FFD700;
+}
+
 
 .button {
   width: 150px;
 }
 
-button {
-  position: absolute; /* Permite mover la tarjeta usando top, left, right, bottom */
-  top: 540px;          /* Mueve la tarjeta hacia abajo desde la parte superior del contenedor */
-  left: 850px;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 30px;
-}
 
 .example-radio-group {
   display: flex;

@@ -11,7 +11,8 @@ export class QuestionService {
 
 
   basePath = environment.serverBasePath;
-  url: string = '/Question';
+  url: string = '/questions';
+  //url: string = '/Question';
 
   private resourcePath(): string {
     return `${this.basePath}${this.url}`;

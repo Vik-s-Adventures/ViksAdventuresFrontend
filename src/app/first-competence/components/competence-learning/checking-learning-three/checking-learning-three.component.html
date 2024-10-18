@@ -1,0 +1,26 @@
+<app-header-page></app-header-page>
+<div class="container">
+  <h2 class="question-title">Pregunta Evaluadora</h2>
+
+  <div class="question-card">
+
+    <p class="question-text">Una piscina inflable de 5200 L de capacidad está llena hasta sus 3/8. ¿Cuántos litros de agua hay que agregar para llenar la piscina?</p>
+    <img class="question-image" src="assets/images/2fivmg.PNG" alt="Imagen referencial">
+    <div class="options-container">
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(1)"> 1950 L
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(2)"> 2500 L
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(3)"> 3250 L
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(4)"> 4600 L
+      </label>
+    </div>
+
+    <button [disabled]="!isOptionSelected" (click)="submitAnswer()">Continuar</button>
+  </div>
+</div>

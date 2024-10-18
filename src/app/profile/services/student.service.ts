@@ -9,7 +9,7 @@ import {Student} from "../model/Student";
 })
 export class StudentService {
   basePath = environment.serverBasePath;
-  url: string = '/Student';
+  url: string = '/students';
 
   private resourcePath(): string {
     return `${this.basePath}${this.url}`;

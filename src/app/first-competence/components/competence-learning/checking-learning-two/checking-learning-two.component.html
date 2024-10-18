@@ -1,0 +1,26 @@
+<app-header-page></app-header-page>
+<div class="container">
+  <h2 class="question-title">Pregunta Evaluadora</h2>
+
+  <div class="question-card">
+
+    <p class="question-text">Se tiene un listón de madera de 3/10 m. ¿Cuántos metros más de madera debo adquirir para completar 17/20 m?</p>
+    <img class="question-image" src="assets/images/2fivmg.PNG" alt="Imagen referencial">
+    <div class="options-container">
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(1)"> 14/20 m
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(2)"> 51/200 m
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(3)"> 11/20 m
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" (change)="selectOption(4)"> 14/10 m
+      </label>
+    </div>
+
+    <button [disabled]="!isOptionSelected" (click)="submitAnswer()">Continuar</button>
+  </div>
+</div>

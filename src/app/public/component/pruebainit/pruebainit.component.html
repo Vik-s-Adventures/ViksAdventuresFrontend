@@ -6,7 +6,7 @@
 
   <mat-radio-group [(ngModel)]="selectedAnswer">
     <mat-radio-button *ngFor="let option of getOptionsByQuestionId(currentQuestion.id)" [value]="option">
-      {{ option.answerText }}
+      {{ option.text }}
     </mat-radio-button>
   </mat-radio-group>
 

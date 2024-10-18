@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Question} from "../../../model/Question";
-import {AnswerOption} from "../../../model/AnswerOption";
+import {Option} from "../../../model/Option";
 import {QuestionService} from "../../../services/question.service";
 import {AnswerOptionService} from "../../../services/answer-option.service";
 import {Router} from "@angular/router";
@@ -13,10 +13,10 @@ import {Router} from "@angular/router";
 })
 export class QuestionTwoPageComponent implements OnInit{
   questions: Question[] = [];
-  answerOptions: AnswerOption[] = [];
+  answerOptions: Option[] = [];
   currentQuestionIndex: number = 0;
   currentQuestion!: Question;
-  selectedAnswer: AnswerOption | null = null;
+  selectedAnswer: Option | null = null;
 
   constructor(
       private router: Router,
@@ -46,7 +46,7 @@ export class QuestionTwoPageComponent implements OnInit{
     this.answerOptionService.getAnswerQuestions().subscribe({
       complete(): void {
       },
-      next: (data: AnswerOption[]) => {
+      next: (data: Option[]) => {
         this.answerOptions = data;
       },
       error: (error) => {
@@ -56,7 +56,7 @@ export class QuestionTwoPageComponent implements OnInit{
   }
 
   //Método para obtener las respuestas filtradas por el ID de la pregunta
-  getOptionsByQuestionId(questionId: number): AnswerOption[] {
+  getOptionsByQuestionId(questionId: number): Option[] {
     return this.answerOptions.filter(option => option.questionId === questionId);
   }
 

@@ -47,6 +47,42 @@ import {
 import {
   SevenInstructionComponent
 } from "./first-competence/performance-modules/seven-instruction/seven-instruction.component";
+import {
+  LevelThreeInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-three-instruction/level-three-instruction.component";
+import {
+  LevelFourInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-four-instruction/level-four-instruction.component";
+import {
+  LevelFiveInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-five-instruction/level-five-instruction.component";
+import {
+  LevelSixInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-six-instruction/level-six-instruction.component";
+import {
+  LevelSevenInstructionComponent
+} from "./first-competence/performance-modules/dialogue-instruction/level-seven-instruction/level-seven-instruction.component";
+import {
+  AllTopicsInstructionComponent
+} from "./first-competence/performance-modules/topics/all-topics-instruction/all-topics-instruction.component";
+import {TopicOneComponent} from "./first-competence/performance-modules/topics/topic-one/topic-one.component";
+import {TopicTwoComponent} from "./first-competence/performance-modules/topics/topic-two/topic-two.component";
+import {TopicThreeComponent} from "./first-competence/performance-modules/topics/topic-three/topic-three.component";
+import {TopicFourComponent} from "./first-competence/performance-modules/topics/topic-four/topic-four.component";
+import {TopicFiveComponent} from "./first-competence/performance-modules/topics/topic-five/topic-five.component";
+import {
+  RandomQuestionComponent
+} from "./first-competence/components/competence-learning/random-question/random-question.component";
+import {
+  CheckingLearningOneComponent
+} from "./first-competence/components/competence-learning/checking-learning-one/checking-learning-one.component";
+import {
+  CheckingLearningTwoComponent
+} from "./first-competence/components/competence-learning/checking-learning-two/checking-learning-two.component";
+import {
+  CheckingLearningThreeComponent
+} from "./first-competence/components/competence-learning/checking-learning-three/checking-learning-three.component";
+
 
 const routes: Routes = [
   {path: '', redirectTo:'menu', pathMatch:'full'},
@@ -66,6 +102,11 @@ const routes: Routes = [
   {path: 'challengeTwo', component: ChallengesTwoComponent},
   {path: 'instructionOne', component: LevelOneInstructionComponent},
   {path: 'instructionTwo', component: LevelTwoInstructionComponent},
+  {path: 'instructionThree', component: LevelThreeInstructionComponent},
+  {path: 'instructionFour', component: LevelFourInstructionComponent},
+  {path: 'instructionFive', component: LevelFiveInstructionComponent},
+  {path: 'instructionSix', component: LevelSixInstructionComponent},
+  {path: 'instructionSeven', component: LevelSevenInstructionComponent},
   {path: 'oneInstruction', component: OneInstructionComponent},
   {path: 'twoInstruction', component: TwoInstructionComponent},
   {path: 'threeInstruction', component: ThreeInstructionComponent},
@@ -73,6 +114,18 @@ const routes: Routes = [
   {path: 'fiveInstruction', component: FiveInstructionComponent},
   {path: 'sixInstruction', component: SixInstructionComponent},
   {path: 'sevenInstruction', component: SevenInstructionComponent},
+  {path: 'topics', component: AllTopicsInstructionComponent},
+  {path: 'topicOne', component: TopicOneComponent},
+  {path: 'topicTwo', component: TopicTwoComponent},
+  {path: 'topicThree', component: TopicThreeComponent},
+  {path: 'topicFour', component: TopicFourComponent},
+  {path: 'topicFive', component: TopicFiveComponent},
+  {path: 'random', component: RandomQuestionComponent},
+  {path: 'checking1', component:CheckingLearningOneComponent },
+  {path: 'checking2', component: CheckingLearningTwoComponent},
+  {path: 'checking3', component: CheckingLearningThreeComponent},
+
+
 
 ];
 

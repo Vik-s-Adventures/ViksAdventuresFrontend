@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import * as Phaser from 'phaser';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-route-map-page',
@@ -7,6 +8,39 @@ import * as Phaser from 'phaser';
   styleUrls: ['./route-map-page.component.css']
 })
 export class RouteMapPageComponent implements OnInit{
+
+  constructor(private router: Router) {}
+
+  goToLevel1(): void {
+    this.router.navigate(['/instructionOne']);
+  }
+  goToLevel2(): void {
+    this.router.navigate(['/instructionTwo']);
+  }
+  goToLevel3(): void {
+    this.router.navigate(['/instructionThree']);
+  }
+  goToLevel4(): void {
+    this.router.navigate(['/instructionFour']);
+  }
+  goToLevel5(): void {
+    this.router.navigate(['/instructionFive']);
+  }
+  goToLevel6(): void {
+    this.router.navigate(['/instructionSix']);
+  }goToLevel7(): void {
+    this.router.navigate(['/instructionSeven']);
+  }
+  goToLevel8(): void {
+    this.router.navigate(['/instructionOne']);
+  }
+  goToLevel9(): void {
+    this.router.navigate(['/instructionOne']);
+  }
+  goToLevel10(): void {
+    this.router.navigate(['/instructionOne']);
+  }
+
   @ViewChild('gameContainer', { static: true }) gameContainer!: ElementRef;
 
   private game!:Phaser.Game;
@@ -17,7 +51,6 @@ export class RouteMapPageComponent implements OnInit{
   private keyD!: Phaser.Input.Keyboard.Key;
   private player!: Phaser.Physics.Arcade.Sprite;
 
-  constructor() {}
 
   ngOnInit(): void {
     this.initializePhaser();

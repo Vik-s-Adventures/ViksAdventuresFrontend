@@ -1,0 +1,48 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../../../../../assets/images/fb2fondo.png'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  background-color: #B2EBF2; /* Celeste bebé */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #FFD700; /* Amarillo */
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 160px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #000;
+}

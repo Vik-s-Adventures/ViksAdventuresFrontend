@@ -2,6 +2,12 @@ export interface Student {
   id: number;
   firstName:string;
   lastName: string;
-  gradeLevel: number;
   birthDate: string;
+  "sex": string,
+  "gradeLevel": number,
+  "school": string,
+  "department": string,
+  "province": string,
+  "district": string,
+  "responses": []
 }

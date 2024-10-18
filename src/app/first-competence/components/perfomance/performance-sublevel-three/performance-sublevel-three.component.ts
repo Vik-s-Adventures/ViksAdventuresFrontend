@@ -61,7 +61,7 @@ export class PerformanceSublevelThreeComponent implements  OnInit{
 class GameScene extends Phaser.Scene {
   private component: PerformanceSublevelThreeComponent;
   private override player!: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
-  private cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
+  private override cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
   private override keyW!: Phaser.Input.Keyboard.Key;  // Tecla W para saltar
   private override keyA!: Phaser.Input.Keyboard.Key;  // Tecla A para moverse a la izquierda
   private override keyD!: Phaser.Input.Keyboard.Key;  // Tecla D para moverse a la derecha

@@ -88,6 +88,28 @@ import {
 import {
   LevelThreeInstructionComponent
 } from "./first-competence/performance-modules/dialogue-instruction/level-three-instruction/level-three-instruction.component";
+import {
+  AllTopicsInstructionComponent
+} from "./first-competence/performance-modules/topics/all-topics-instruction/all-topics-instruction.component";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {TopicOneComponent} from "./first-competence/performance-modules/topics/topic-one/topic-one.component";
+import {TopicThreeComponent} from "./first-competence/performance-modules/topics/topic-three/topic-three.component";
+import {TopicTwoComponent} from "./first-competence/performance-modules/topics/topic-two/topic-two.component";
+import {TopicFourComponent} from "./first-competence/performance-modules/topics/topic-four/topic-four.component";
+import {TopicFiveComponent} from "./first-competence/performance-modules/topics/topic-five/topic-five.component";
+import {
+  RandomQuestionComponent
+} from "./first-competence/components/competence-learning/random-question/random-question.component";
+import {
+  CheckingLearningThreeComponent
+} from "./first-competence/components/competence-learning/checking-learning-three/checking-learning-three.component";
+import {
+  CheckingLearningOneComponent
+} from "./first-competence/components/competence-learning/checking-learning-one/checking-learning-one.component";
+import {
+  CheckingLearningTwoComponent
+} from "./first-competence/components/competence-learning/checking-learning-two/checking-learning-two.component";
 
 
 
@@ -127,21 +149,33 @@ import {
       LevelSevenInstructionComponent,
       LevelSixInstructionComponent,
       LevelThreeInstructionComponent,
+      AllTopicsInstructionComponent,
+      TopicOneComponent,
+      TopicThreeComponent,
+      TopicTwoComponent,
+      TopicFourComponent,
+      TopicFiveComponent,
+      CheckingLearningThreeComponent,
+      CheckingLearningOneComponent,
+      CheckingLearningTwoComponent,
+      RandomQuestionComponent,
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        RouterOutlet,
-        MatCardModule,
-        MatCheckboxModule,
-        ReactiveFormsModule,
-        MatRadioModule,
-        FormsModule,
-        MatButtonModule,
-        MatToolbarModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterOutlet,
+    MatCardModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatRadioModule,
+    FormsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+  ],
     providers: [QuestionService, AnswerOptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
     exports: [
         HeaderPageComponent

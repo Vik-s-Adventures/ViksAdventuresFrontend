@@ -11,15 +11,15 @@ import {Router, RouterLink} from "@angular/router";
 export class ResultPageComponent {
   cards: { value: number, id: number, title: string, route: string }[] = [
     { value: 0, id: 1,title:'Nivel 1', route: '/instructionOne' },
-    { value: 0, id: 2,title:'Nivel 2', route: '/componente' },
-    { value: 0, id: 3,title:'Nivel 3', route: '/instructionTwo' },
-    { value: 0, id: 4,title:'Nivel 4', route: '/component4' },
-    { value: 0, id: 5,title:'Nivel 5', route: '/component5' },
-    { value: 0, id: 6,title:'Nivel 6', route: '/component6' },
-    { value: 0, id: 7,title:'Nivel 7', route: '/component7' },
-    { value: 0, id: 8,title:'Nivel 8', route: '/component8' },
-    { value: 0, id: 9,title:'Nivel 9', route: '/component9' },
-    { value: 0, id: 10,title:'Nivel 10', route: '/component10' }
+    { value: 0, id: 2,title:'Nivel 2', route: '/instructionTwo' },
+    { value: 0, id: 3,title:'Nivel 3', route: '/instructionThree' },
+    { value: 0, id: 4,title:'Nivel 4', route: '/instructionFour' },
+    { value: 0, id: 5,title:'Nivel 5', route: '/instructionFive' },
+    { value: 0, id: 6,title:'Nivel 6', route: '/instructionSix' },
+    { value: 0, id: 7,title:'Nivel 7', route: '/instructionSeven' },
+    { value: 0, id: 8,title:'Nivel 8', route: '/instructionSix' },
+    { value: 0, id: 9,title:'Nivel 9', route: '/instructionSix' },
+    { value: 0, id: 10,title:'Nivel 10', route: '/instructionSix' }
   ];
 
   constructor(private router: Router) {

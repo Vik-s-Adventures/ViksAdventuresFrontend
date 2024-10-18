@@ -1,0 +1,76 @@
+/* Fondo general en azul oscuro */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #001F3F;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: darkblue;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  text-shadow: 0px 0px 10px darkblue, 0px 0px 20px darkblue;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+/* Grid centrado y alineado */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estilo de las cards con contenido centrado */
+.dialog-card {
+  background-color: rgba(173, 216, 230, 0.8); /* Celeste bebé */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Cambio de color al hacer hover */
+.dialog-card:hover {
+  background-color: #FFD700;
+  box-shadow: 0 0 20px #FFD700;
+}
+
+/* Títulos centrados */
+.dynamic-title-centered {
+  font-family: 'Press Start 2P', cursive;
+  color: darkblue;
+  text-shadow: 0px 0px 10px darkblue, 0px 0px 20px darkblue;
+  margin-bottom: 10px;
+}
+
+/* Imágenes centradas y del mismo tamaño */
+.image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Listas centradas */
+ul {
+  font-family: 'Press Start 2P', cursive;
+  list-style-type: disc;
+  padding: 0;
+  margin: 10px 0;
+}

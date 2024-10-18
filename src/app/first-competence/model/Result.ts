@@ -1,6 +1,5 @@
-export interface QuizResult {
+export interface Result {
   id: number;
   score: number;
   studentId: number;
-  quizId: number;
 }

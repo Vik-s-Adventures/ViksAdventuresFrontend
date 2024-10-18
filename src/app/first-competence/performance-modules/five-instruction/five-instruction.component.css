@@ -73,6 +73,7 @@ body, html {
 
 .example-card img {
   max-width: 100%;
+  max-height: 100%;
   margin-top: 10px;
   border-radius: 10px;
 }
@@ -190,7 +191,7 @@ button:hover {
 
 /* Ajuste del tamaño de las imágenes en las cards de ejemplos */
 .example-card img {
-  max-width: 40%; /* Reduce el tamaño de la imagen al 80% del ancho del contenedor */
+  max-width: 65%; /* Reduce el tamaño de la imagen al 80% del ancho del contenedor */
   height: auto; /* Mantén la proporción de la imagen */
   margin-top: 10px;
   border-radius: 10px;

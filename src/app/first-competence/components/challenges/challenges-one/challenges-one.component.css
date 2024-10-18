@@ -16,7 +16,6 @@ body {
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: stretch;;
   padding: 50px;
   z-index: 1;

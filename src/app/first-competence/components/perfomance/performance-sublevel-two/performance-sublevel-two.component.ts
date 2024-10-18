@@ -81,7 +81,7 @@ export class PerformanceSublevelTwoComponent implements OnInit {
 // @ts-ignore
 class PacmanScene extends Phaser.Scene {
   private pacman!: Phaser.Physics.Arcade.Sprite;
-  private cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
+  private override cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
   private override keyW!: Phaser.Input.Keyboard.Key;
   private override keyA!: Phaser.Input.Keyboard.Key;
   private override keyS!: Phaser.Input.Keyboard.Key;

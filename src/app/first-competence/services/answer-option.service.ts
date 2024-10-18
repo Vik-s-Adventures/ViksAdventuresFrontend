@@ -10,7 +10,8 @@ import {Question} from "../model/Question";
 export class AnswerOptionService {
 
   basePath = environment.serverBasePath;
-  url: string = '/AnswerOption';
+  url: string = '/options';
+  //url: string = '/Option';
 
   private resourcePath(): string {
     return `${this.basePath}${this.url}`;

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {environment} from "../../shared/environments/environment.development";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry} from "rxjs";
-import {QuizResult} from "../model/QuizResult";
+import {Result} from "../model/Result";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ import {QuizResult} from "../model/QuizResult";
 export class QuizResultService {
 
   basePath = environment.serverBasePath;
-  url: string = '/QuizResult';
+  //url: string = '/Result';
+  url: string = '/results';
 
   private resourcePath(): string {
     return `${this.basePath}${this.url}`;
@@ -24,9 +25,9 @@ export class QuizResultService {
     }),
   };
 
-  getQuizResults(): Observable<QuizResult[]> {
+  getQuizResults(): Observable<Result[]> {
     return this.http
-      .get<QuizResult[]>(this.resourcePath(), this.httpOptions)
+      .get<Result[]>(this.resourcePath(), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
