@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="button-container">
+    <button class="nav-button" (click)="navigateToComponent1()">MENU</button>
+    <button class="nav-button" (click)="navigateToComponent2()">TU RUTA</button>
+  </div>
+
+  <!-- Sprite a la izquierda -->
+  <div id="phaser-container"></div>
+
+  <!-- Contenedor de las cards, alineadas en columna -->
+  <div class="card-container">
+
+    <!-- Título grande en el primer diálogo -->
+    <div class="title" *ngIf="currentCard === 0">
+      <h1 class="dynamic-title">DECIMALES</h1>
+    </div>
+
+    <!-- Card de presentación del tema -->
+    <div class="dialog-card" *ngIf="currentCard === 0">
+      <p>Ahora vamos aprender sobre las operaciones básicas con números decimales: suma, resta, multiplicación y división. Cada una tiene sus propias reglas que debemos seguir.</p>
+    </div>
+
+    <!-- Card explicando la suma de decimales -->
+    <div class="title" *ngIf="currentCard === 1">
+      <h2 class="dynamic-title-small">SUMA</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 1">
+      <p>Para sumar decimales, alinea los puntos decimales y suma de derecha a izquierda, como si fueran enteros.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 1">
+      <img src="assets/images/suma.PNG" alt="Ejemplo de suma de decimales">
+    </div>
+
+    <!-- Card explicando la resta de decimales -->
+    <div class="title" *ngIf="currentCard === 2">
+      <h2 class="dynamic-title-small">RESTA</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 2">
+      <p>Para restar decimales, alinea los puntos decimales y resta de derecha a izquierda, como si fueran enteros.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 2">
+      <img src="assets/images/resta.PNG" alt="Ejemplo de resta de decimales">
+    </div>
+
+
+    <!-- Card explicando la multiplicación de decimales -->
+    <div class="title" *ngIf="currentCard === 3">
+      <h2 class="dynamic-title-small">MULTIPLICACIÓN</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 3">
+      <p>Multiplica los números como si fueran enteros. Luego, coloca el punto decimal en el lugar correcto contando los decimales en ambos factores.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 3">
+      <img src="assets/images/multiplicacion.PNG" alt="Ejemplo de multiplicación de decimales">
+    </div>
+
+
+    <!-- Card explicando la división de decimales -->
+    <div class="title" *ngIf="currentCard === 4">
+      <h2 class="dynamic-title-small">DIVISIÓN</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 4">
+      <p>Para dividir decimales, mueve el punto decimal hasta que el divisor sea un número entero, y luego divide normalmente.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 4">
+      <img src="assets/images/division.PNG" alt="Ejemplo de división de decimales">
+    </div>
+
+
+    <!-- Sección de Fórmulas importantes -->
+    <div class="title" *ngIf="currentCard === 5">
+      <h2 class="dynamic-title-small">FÓRMULAS IMPORTANTES</h2>
+    </div>
+    <div class="dialog-card small-text" *ngIf="currentCard === 5">
+      <p>- Suma: Alinea los puntos decimales y suma de derecha a izquierda.</p>
+      <p>- Resta: Alinea los puntos decimales y resta de derecha a izquierda.</p>
+      <p>- Multiplicación: Multiplica como si fueran enteros y coloca el punto decimal sumando los decimales de ambos factores.</p>
+      <p>- División: Mueve el punto decimal del divisor y el dividendo para convertir el divisor en un número entero, luego divide normalmente.</p>
+    </div>
+
+    <!-- Card explicando los consejos útiles -->
+    <div class="title" *ngIf="currentCard === 6">
+      <h2 class="dynamic-title-small">CONSEJOS</h2>
+    </div>
+    <div class="dialog-card small-text" *ngIf="currentCard === 6">
+      <p>- Alinea siempre los decimales cuando sumes o restes.</p>
+      <p>- Usa ceros de relleno para que sea más fácil realizar las operaciones.</p>
+      <p>- Si un número decimal es difícil de manejar, a veces es útil convertirlo en una fracción.</p>
+      <p>- Antes de calcular el resultado exacto, estima el valor para verificar que tu respuesta final tiene sentido.</p>
+    </div>
+
+
+    <!-- Card final con el botón "Recuerda" -->
+    <div class="dialog-card" *ngIf="currentCard === 7">
+      <p>¡Eso es todo! Recuerda practicar las operaciones con decimales para mejorar tu precisión y rapidez.</p>
+      <button (click)="goToRemember()">CONTINUEMOS</button>
+    </div>
+
+  </div> <!-- Fin del contenedor de las cards -->
+
+  <!-- Footer con las flechas centradas -->
+  <footer class="footer-container">
+    <div class="arrow-left" *ngIf="currentCard > 0" (click)="previousCard()"></div>
+    <div class="arrow" *ngIf="currentCard < 7" (click)="nextCard()"></div>
+  </footer>
+
+</div>

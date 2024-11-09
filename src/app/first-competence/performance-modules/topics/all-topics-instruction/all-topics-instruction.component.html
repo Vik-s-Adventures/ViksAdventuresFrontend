@@ -1,0 +1,11 @@
+<app-header-page></app-header-page>
+<div class="card-grid">
+  <div
+    class="card"
+    *ngFor="let card of cards"
+    (click)="navigateTo(card.id)"
+  >
+    <img [src]="card.image" alt="{{ card.title }}" />
+    <h3>{{ card.title }}</h3>
+  </div>
+</div>

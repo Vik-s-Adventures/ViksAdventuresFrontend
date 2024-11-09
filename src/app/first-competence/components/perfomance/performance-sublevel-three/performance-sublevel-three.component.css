@@ -1,0 +1,52 @@
+#gameContainer {
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  height: calc(100vh - 50px); /* Resta el espacio del header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevenir barras de desplazamiento */
+  height: 100%;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444; /* Cambiado a gris oscuro para visibilidad */
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+  color: white; /* Texto blanco para mejor contraste */
+  height: 50px;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+.button-container button {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0 10px;
+  background-color: #03A9F4; /* Azul para los botones */
+  color: #fff; /* Texto blanco */
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #FFD700; /* Amarillo en hover */
+  color: black;
+}
+
+.score-container {
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  white-space: nowrap; /* Evita que el texto se desborde */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
+}

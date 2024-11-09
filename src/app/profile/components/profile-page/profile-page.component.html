@@ -1,0 +1,69 @@
+<app-header-page></app-header-page>
+<body>
+<div class="card">
+  <div class="user-info">
+    <img src="assets/images/vickk.png" alt="User Image" class="user-image">
+    <h2 class="user-title">Bienvenido</h2>
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+    <div class="form-container">
+      <!-- Primera columna -->
+      <div class="column">
+        <div>
+          <label for="firstName">Nombre:</label>
+          <input type="text" id="firstName" name="firstName" [(ngModel)]="student.firstName" required>
+        </div>
+
+        <div>
+          <label for="birthDate">Fecha de nacimiento:</label>
+          <input type="date" id="birthDate" name="birthDate" [(ngModel)]="student.birthDate" required>
+        </div>
+
+        <div>
+          <label for="gradeLevel">Nivel de grado:</label>
+          <input type="number" id="gradeLevel" name="gradeLevel" [(ngModel)]="student.gradeLevel" required>
+        </div>
+
+        <div>
+          <label for="department">Departamento:</label>
+          <input type="text" id="department" name="department" [(ngModel)]="student.department" required>
+        </div>
+      </div>
+
+      <!-- Segunda columna -->
+      <div class="column">
+        <div>
+          <label for="lastName">Apellido:</label>
+          <input type="text" id="lastName" name="lastName" [(ngModel)]="student.lastName" required>
+        </div>
+
+        <div>
+          <label for="sex">Sexo:</label>
+          <select id="sex" name="sex" [(ngModel)]="student.sex" required>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="school">Escuela:</label>
+          <input type="text" id="school" name="school" [(ngModel)]="student.school" required>
+        </div>
+
+        <div>
+          <label for="province">Provincia:</label>
+          <input type="text" id="province" name="province" [(ngModel)]="student.province" required>
+        </div>
+
+        <div>
+          <label for="district">Distrito:</label>
+          <input type="text" id="district" name="district" [(ngModel)]="student.district" required>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="studentForm.invalid">Enviar</button>
+  </form>
+</div>
+</body>

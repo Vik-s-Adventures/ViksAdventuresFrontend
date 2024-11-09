@@ -1,0 +1,23 @@
+<app-header-page></app-header-page>
+<h1 class="main-title">PORCENTAJES</h1>
+
+<div class="card-grid">
+  <!-- Definiciones de fracciones -->
+  <div *ngFor="let definition of definitions" class="dialog-card">
+    <h2 class="dynamic-title-centered">{{ definition.title }}</h2>
+    <ul>
+      <li>{{ definition.description }}</li>
+    </ul>
+    <img [src]="definition.imageUrl" alt="Question Image" style="max-width: 40%; height: auto;">
+  </div>
+
+  <!-- Consejos útiles -->
+  <div class="dialog-card">
+    <h2 class="dynamic-title-centered">CONSEJOS ÚTILES</h2>
+    <ul>
+      <li *ngFor="let tip of tips">{{ tip.tipText }}</li>
+    </ul>
+  </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  justify-content: space-between; /* Espacio entre el temporizador y el botón */
+  align-items: center; /* Centra verticalmente el contenido */
+  padding: 15px 30px; /* Espaciado alrededor del contenido */
+  background-color: powderblue; /* Fondo azul oscuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+  color: white; /* Texto blanco para contraste */
+
+}
+
+.timer {
+  font-family: 'Press Start 2P', cursive; /* Fuente limpia y legible */
+  font-size: 24px; /* Tamaño de fuente grande para mayor visibilidad */
+  font-weight: bold; /* Hace que el tiempo se vea más destacado */
+  color: #2563eb; /* Color azul claro */
+}
+
+button {
+  font-family: 'Press Start 2P', cursive; /* Fuente limpia y legible */
+  background-color: #2563eb; /* Fondo azul primario */
+  color:#60a5fa ; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado dentro del botón */
+  border-radius: 5px; /* Bordes redondeados para un estilo moderno */
+  font-size: 16px; /* Tamaño de fuente legible */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  border: none; /* Sin borde para un diseño limpio */
+}
+
+button:hover {
+  background-color: #3b82f6; /* Cambia a un azul más claro en hover */
+}
+
+button:focus {
+  outline: none; /* Elimina el borde del foco predeterminado */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5); /* Sombra azul en foco */
+}

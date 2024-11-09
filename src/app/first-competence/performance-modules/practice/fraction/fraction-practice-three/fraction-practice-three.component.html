@@ -1,0 +1,23 @@
+<app-header-page></app-header-page>
+<div class="background">
+<div class="fraction-card">
+  <h2>Completa las fracciones observando las imágenes</h2>
+
+  <!-- Cuadrícula de fracciones -->
+  <div class="fraction-grid">
+    <div *ngFor="let fraction of fractions" class="fraction-cell">
+      <img [src]="fraction.img" alt="Imagen de fracción" />
+      <input
+        [(ngModel)]="fraction.userAnswer"
+        (input)="checkAnswers()"
+        placeholder="Ingresa la fracción"
+        aria-label="Input de fracción"
+      />
+      <p class="fraction-type">{{ fraction.type }}</p>
+    </div>
+  </div>
+
+  <!-- Botón de Continuemos -->
+  <button [disabled]="!isCompleted">Continuemos</button>
+</div>
+</div>

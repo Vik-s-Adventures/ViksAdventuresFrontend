@@ -1,0 +1,16 @@
+<body>
+<div class="game-container">
+  <header>
+    <div class="header-content">
+      <span class="score" style="font-family: 'Press Start 2P',ui-sans-serif; color: white;">MONEDAS: {{ score }}</span>
+      <span class="lives" style="font-family: 'Press Start 2P',ui-sans-serif; color: white;">VIDAS: {{ lives }}</span>
+      <button style="font-family: 'Press Start 2P',ui-sans-serif; color: black;" (click)="togglePause()">
+        {{ gamePaused ? 'CONTINUAR' : 'PAUSA' }}
+      </button>
+      <button style="font-family: 'Press Start 2P',ui-sans-serif; color: black;" (click)="goToRuta()">RUTA</button>
+      <button style="font-family: 'Press Start 2P',ui-sans-serif; color: black;" (click)="goToMenu()">MENU</button>
+    </div>
+  </header>
+  <canvas id="myCanvas"></canvas>
+</div>
+</body>

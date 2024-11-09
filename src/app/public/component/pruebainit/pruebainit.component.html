@@ -1,0 +1,16 @@
+<mat-card *ngIf="currentQuestion">
+  <mat-card-title>Pregunta {{ currentQuestion.id }}</mat-card-title>
+  <mat-card-content>
+    <p>{{ currentQuestion.questionText }}</p>
+  </mat-card-content>
+
+  <mat-radio-group [(ngModel)]="selectedAnswer">
+    <mat-radio-button *ngFor="let option of getOptionsByQuestionId(currentQuestion.id)" [value]="option">
+      {{ option.text }}
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div class="actions">
+    <button mat-button (click)="nextQuestion()" [disabled]="!selectedAnswer">Siguiente</button>
+  </div>
+</mat-card>

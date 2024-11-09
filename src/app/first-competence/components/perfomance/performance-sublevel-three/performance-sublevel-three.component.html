@@ -1,0 +1,11 @@
+<div class="game-header">
+  <div class="score-container">
+    <p>Vidas: {{ lives }}      Puntaje: {{ score }}</p>
+  </div>
+  <div class="button-container">
+    <button mat-button (click)="navigateToMenu()">MENU</button>
+    <button mat-button (click)="navigateToRoute()">RUTA</button>
+  </div>
+</div>
+
+<div id="gameContainer"></div>

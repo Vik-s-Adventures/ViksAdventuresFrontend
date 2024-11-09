@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="button-container">
+    <button class="nav-button" (click)="navigateToComponent1()">MENU</button>
+    <button class="nav-button" (click)="navigateToComponent2()">TU RUTA</button>
+  </div>
+
+  <!-- Sprite a la izquierda -->
+  <div id="phaser-container"></div>
+
+  <!-- Contenedor de las cards, alineadas en columna -->
+  <div class="card-container">
+
+    <!-- Título grande en el primer diálogo -->
+    <div class="title" *ngIf="currentCard === 0">
+      <h1 class="dynamic-title">FRACCIONES 2</h1>
+    </div>
+
+    <!-- Card de presentación del tema -->
+    <div class="dialog-card" *ngIf="currentCard === 0">
+      <p>Hoy aprenderemos sobre fracciones. Son una herramienta útil para expresar partes de un todo o distribuir algo en partes iguales.</p>
+    </div>
+
+    <!-- Cada concepto ahora en una tarjeta separada -->
+    <div class="title" *ngIf="currentCard === 1">
+      <h2 class="dynamic-title-small">Parte de un todo</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 1">
+      <p>Una fracción representa una división del todo en partes iguales.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 1">
+      <img src="assets/images/fivmg.PNG" alt="Fracción Parte de un Todo">
+    </div>
+
+    <div class="title" *ngIf="currentCard === 2">
+      <h2 class="dynamic-title-small">Fracción complementaria</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 2">
+      <p>La parte restante de un todo cuando una porción ha sido utilizada.</p>
+      <p>Ejemplo: el resto de la gráfica seria 1/3</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 2">
+      <img src="assets/images/2fivmg.PNG" alt="Fracción Complementaria">
+    </div>
+
+    <div class="title" *ngIf="currentCard === 3">
+      <h2 class="dynamic-title-small">Homogeneizar</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 3">
+      <p>Proceso de uniformizar los denominadores de fracciones heterogéneas.</p>
+    </div>
+
+
+    <div class="title" *ngIf="currentCard === 4">
+      <h2 class="dynamic-title-small">Fracciones equivalentes</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 4">
+      <p>Representan la misma parte de un todo, aunque los numeradores y denominadores sean diferentes.</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 4">
+      <img src="assets/images/fivequivalente.jpg" alt="Fracciones Equivalentes">
+    </div>
+
+    <!-- Cada fórmula ahora en una tarjeta separada -->
+    <div class="title" *ngIf="currentCard === 5">
+      <h2 class="dynamic-title-small">SUMA</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 5">
+      <p>Ejemplo para sumar fracciones:</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 5">
+      <img src="assets/images/fivsuma.png" alt="Suma de Fracciones">
+    </div>
+
+    <div class="title" *ngIf="currentCard === 6">
+      <h2 class="dynamic-title-small">RESTA</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 6">
+      <p>Ejemplo ara restar fracciones:</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 6">
+      <img src="assets/images/fivresta.png" alt="Resta de Fracciones">
+    </div>
+
+    <div class="title" *ngIf="currentCard === 7">
+      <h2 class="dynamic-title-small">DIVISÓN</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 7">
+      <p>Ejemplo para dividir:</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 7">
+      <img src="assets/images/fivdividir.PNG" alt="División de Fracciones">
+    </div>
+
+    <div class="title" *ngIf="currentCard === 8">
+      <h2 class="dynamic-title-small">MULTIPLICACIÓN</h2>
+    </div>
+    <div class="dialog-card" *ngIf="currentCard === 8">
+      <p>Ejemplo para multiplicar:</p>
+    </div>
+    <div class="example-card" *ngIf="currentCard === 8">
+      <img src="assets/images/fivmulti.PNG" alt="División de Fracciones">
+    </div>
+
+    <!-- Consejos en la última tarjeta -->
+    <div class="title" *ngIf="currentCard === 9">
+      <h2 class="dynamic-title-small">CONSEJOS</h2>
+    </div>
+    <div class="dialog-card small-text" *ngIf="currentCard === 9">
+      <p>1. Dos o más fracciones son equivalentes cuando representan la misma parte de un todo.</p>
+      <p>2. Para sumar o restar fracciones con el mismo denominador (homogéneas), se suman o restan los numeradores y se coloca el mismo denominador.</p>
+    </div>
+
+    <!-- Card final con el botón "Recuerda" -->
+    <div class="dialog-card" *ngIf="currentCard === 10">
+      <p>¡Eso es todo! Recuerda practicar las fracciones para dominar los conceptos.</p>
+      <button (click)="goToRemember()">CONTINUEMOS</button>
+    </div>
+
+  </div> <!-- Fin del contenedor de las cards -->
+
+  <!-- Footer con las flechas centradas -->
+  <footer class="footer-container">
+    <div class="arrow-left" *ngIf="currentCard > 0" (click)="previousCard()"></div>
+    <div class="arrow" *ngIf="currentCard < 10" (click)="nextCard()"></div>
+  </footer>
+
+</div>

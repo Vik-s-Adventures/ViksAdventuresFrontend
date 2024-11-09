@@ -1,0 +1,208 @@
+/* Estilo general para centrar y usar la imagen de fondo */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('src/assets/images/fondoinicio.jpg'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo de la card que contiene el formulario y la imagen con el título */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 700px; /* Ancho máximo para que todo esté centrado */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  justify-content: center;
+}
+
+/* Estilo para la información del usuario */
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.user-title {
+  margin-left: 15px;
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+/* Estilo para la imagen del usuario (circular) */
+.user-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Hacer la imagen circular */
+  object-fit: cover;
+  border: 2px solid #1e90ff; /* Borde azul alrededor de la imagen */
+}
+
+/* Contenedor del formulario */
+form {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Contenedor de dos columnas para el formulario */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Cada columna ocupa el 45% del ancho */
+.column {
+  width: 45%;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #1e90ff; /* Borde azul */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #e6f7ff; /* Fondo azul claro */
+  color: #000;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #4169e1; /* Cambia el color del borde al hacer foco */
+  outline: none;
+}
+
+/* Estilos para las etiquetas */
+label {
+  font-weight: bold;
+  color: #1e90ff;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+/* Estilo para el botón */
+button[type="submit"] {
+  background-color: #1e90ff; /* Azul inicial */
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambiar el color del botón al pasar el cursor */
+button[type="submit"]:hover {
+  background-color: #FFCC00;
+}
+
+button[type="submit"]:active {
+  background-color: #6495ed;
+}
+
+/* Estilo para el snackbar de éxito */
+.success-snackbar {
+  background-color: #4caf50; /* Verde para éxito */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo para el snackbar de error */
+.error-snackbar {
+  background-color: #f44336; /* Rojo para error */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Contenedor para alinear los botones en la misma fila */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 20px; /* Añade espacio superior entre el formulario y los botones */
+}
+
+/* Estilo para los botones */
+button[type="submit"],
+button[type="button"] {
+  background-color: #1e90ff; /* Azul inicial */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px; /* Ancho fijo para ambos botones */
+  transition: background-color 0.3s ease;
+}
+
+/* Cambiar el color del botón al pasar el cursor */
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #FFCC00;
+}
+
+button[type="submit"]:active,
+button[type="button"]:active {
+  background-color: #6495ed;
+}
+
+/* Aseguramos que el formulario y los botones se vean bien en pantallas pequeñas */
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column; /* Los botones se apilan en pantallas pequeñas */
+    align-items: center;
+  }
+
+  button[type="submit"],
+  button[type="button"] {
+    width: 100%; /* Los botones ocupan todo el ancho disponible en pantallas pequeñas */
+  }
+}
+
+
+/* Aseguramos que el formulario se vea bien en pantallas pequeñas */
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
