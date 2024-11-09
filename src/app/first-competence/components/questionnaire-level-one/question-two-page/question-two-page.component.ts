@@ -1,9 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {Question} from "../../../model/Question";
-import {Option} from "../../../model/Option";
-import {QuestionService} from "../../../services/question.service";
-import {AnswerOptionService} from "../../../services/answer-option.service";
-import {Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Question } from "../../../model/Question";
+import { Option } from "../../../model/Option";
+import { QuestionService } from "../../../services/question.service";
+import { OptionService } from "../../../services/option.service";
+import {StudentResponseService} from "../../../services/student-response.service";// Nuevo servicio para guardar la respuesta
+import { Router } from "@angular/router";
+import {Student} from "../../../../profile/model/Student";
+import { Response } from "../../../model/Response";
+import {StudentService} from "../../../../profile/services/student.service";
+
 
 
 @Component({
@@ -11,22 +16,29 @@ import {Router} from "@angular/router";
   templateUrl: './question-two-page.component.html',
   styleUrl: './question-two-page.component.css'
 })
-export class QuestionTwoPageComponent implements OnInit{
+export class QuestionTwoPageComponent implements OnInit {
   questions: Question[] = [];
   answerOptions: Option[] = [];
   currentQuestionIndex: number = 0;
   currentQuestion!: Question;
   selectedAnswer: Option | null = null;
+  currentStudent!: Student;  // Objeto de estudiante actual, que debe ser asignado
+  responses: Response[] = [];  // Array para almacenar respuestas
+  private student: Student | undefined;
 
   constructor(
-      private router: Router,
-      private questionService: QuestionService,
-      private answerOptionService: AnswerOptionService
-) {}
+    private router: Router,
+    private questionService: QuestionService,
+    private optionService: OptionService,
+    private responseService: StudentResponseService, // Servicio nuevo para manejar las respuestas
+     private studentService: StudentService,
+  ) {}
 
   ngOnInit(): void {
     this.loadQuestions();
     this.loadAnswerOptions();
+    this.loadCurrentStudent();
+    // Cargar el estudiante actual
   }
 
   loadQuestions(): void {
@@ -43,7 +55,7 @@ export class QuestionTwoPageComponent implements OnInit{
 
   loadAnswerOptions(): void {
     // @ts-ignore
-    this.answerOptionService.getAnswerQuestions().subscribe({
+    this.optionService.getAnswerQuestions().subscribe({
       complete(): void {
       },
       next: (data: Option[]) => {
@@ -55,20 +67,59 @@ export class QuestionTwoPageComponent implements OnInit{
     });
   }
 
-  //Método para obtener las respuestas filtradas por el ID de la pregunta
+  // Método para obtener las respuestas filtradas por el ID de la pregunta
   getOptionsByQuestionId(questionId: number): Option[] {
     return this.answerOptions.filter(option => option.questionId === questionId);
   }
 
-  //Método para pasar a la siguiente pregunta
-  nextQuestion(): void {
-    this.selectedAnswer = null; // Resetear la selección
-    this.currentQuestionIndex++;
-    if (this.currentQuestionIndex < this.questions.length) {
-    this.currentQuestion = this.questions[this.currentQuestionIndex];
-  } else {
-    alert('Has completado el cuestionario');
-      this.router.navigate(['/result']);  // Reemplaza 'target-route' por tu ruta de destino
+  // Cargar el estudiante actual (esto puede ser desde un servicio o localStorage)
+  loadCurrentStudent(): void {
+    // Simulando la carga del estudiante actual (esto dependerá de tu lógica)
+    this.currentStudent = {
+      id: 16,
+      firstName: 'Romina',
+      lastName: 'Lourdes',
+      birthDate: '17/04/2003',
+      sex: 'F',
+      gradeLevel: 1,
+      school: 'IE Faz',
+      department: 'Lima',
+      province: 'Lima',
+      district: 'Villa Maria del Triunfo'
+    };
   }
+
+  nextQuestion(): void {
+    if (this.selectedAnswer && this.currentStudent) {
+      const newResponse: Response = {
+        id: 0,  // O el valor que sea asignado por tu backend si es generado automáticamente
+        studentId: Number(this.currentStudent.id), // Asegúrate de que es un número
+        optionId: Number(this.selectedAnswer.id)   // Asegúrate de que es un número
+      };
+
+      // Guardar la respuesta en el backend
+      // @ts-ignore
+      this.responseService.saveResponse(newResponse).subscribe({
+        next: (response) => {
+          console.log('Respuesta guardada exitosamente', response);
+          //this.responses.push(newResponse);  // Almacenar la respuesta en el array localmente
+        },
+        error: (error) => {
+          console.error('Error al guardar la respuesta', error);
+        }
+      });
+
+      this.selectedAnswer = null; // Resetear la selección
+      this.currentQuestionIndex++;
+
+      if (this.currentQuestionIndex < this.questions.length) {
+        this.currentQuestion = this.questions[this.currentQuestionIndex];
+      }
+      else {
+        alert('Has completado el cuestionario');
+        this.router.navigate(['/result']);  // Navegar al resultado
+      }
+    }
+
 }
 }

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Question} from "../../../first-competence/model/Question";
 import {Option} from "../../../first-competence/model/Option";
 import {QuestionService} from "../../../first-competence/services/question.service";
-import {AnswerOptionService} from "../../../first-competence/services/answer-option.service";
+import {OptionService} from "../../../first-competence/services/option.service";
 
 
 @Component({
@@ -20,7 +20,7 @@ export class PruebainitComponent implements OnInit {
 
   constructor(
     private questionService: QuestionService,
-    private answerOptionService: AnswerOptionService
+    private answerOptionService: OptionService
   ) {}
 
   ngOnInit(): void {

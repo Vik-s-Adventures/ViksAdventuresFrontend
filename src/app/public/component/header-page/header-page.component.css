@@ -1,39 +1,61 @@
-.footer {
+/* Estilos para el header */
+.header {
   display: flex;
-  justify-content: space-between; /* Espacio entre el temporizador y el botón */
-  align-items: center; /* Centra verticalmente el contenido */
-  padding: 15px 30px; /* Espaciado alrededor del contenido */
+  justify-content: space-between; /* Distribuye el espacio entre botones */
+  align-items: center; /* Centra verticalmente los botones */
+  padding: 5px 10px; /* Espaciado alrededor del contenido */
   background-color: darkblue; /* Fondo azul oscuro */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
-  color: white; /* Texto blanco para contraste */
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  color: white; /* Texto blanco */
+  flex-wrap: wrap; /* Para que los elementos se ajusten automáticamente en pantallas pequeñas */
 }
 
-.timer {
-  font-family: 'Press Start 2P', cursive; /* Fuente limpia y legible */
-  font-size: 24px; /* Tamaño de fuente grande para mayor visibilidad */
-  font-weight: bold; /* Hace que el tiempo se vea más destacado */
-  color: #2563eb; /* Color azul claro */
-}
-
+/* Estilo de los botones */
 button {
-  font-family: 'Press Start 2P', cursive; /* Fuente limpia y legible */
+  font-family: 'Press Start 2P', cursive; /* Fuente personalizada */
   background-color: #2563eb; /* Fondo azul primario */
-  color:#60a5fa ; /* Texto blanco */
-  padding: 10px 20px; /* Espaciado dentro del botón */
-  border-radius: 5px; /* Bordes redondeados para un estilo moderno */
-  font-size: 16px; /* Tamaño de fuente legible */
+  color: white; /* Texto blanco */
+  padding: 5px 10px; /* Espaciado dentro del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en el botón */
-  transition: background-color 0.3s ease; /* Transición suave para el hover */
-  border: none; /* Sin borde para un diseño limpio */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background-color 0.3s ease; /* Transición suave */
+  border: none; /* Sin borde */
+  margin: 5px; /* Espaciado entre botones */
 }
 
 button:hover {
-  background-color: #3b82f6; /* Cambia a un azul más claro en hover */
+  background-color: #FFCC00; /* Color más claro al hacer hover */
 }
 
 button:focus {
-  outline: none; /* Elimina el borde del foco predeterminado */
+  outline: none; /* Elimina el borde predeterminado al enfocar */
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5); /* Sombra azul en foco */
+}
+
+/* Hacer que el header sea responsivo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Coloca los botones en columna en pantallas pequeñas */
+    align-items: stretch; /* Hace que los botones ocupen todo el ancho */
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  button {
+    width: 100%; /* Los botones ocupan el 100% del ancho en pantallas pequeñas */
+    padding: 15px; /* Aumenta el padding de los botones */
+    font-size: 14px; /* Reduce el tamaño de fuente */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 5px; /* Reduce aún más el padding en pantallas muy pequeñas */
+  }
+
+  button {
+    font-size: 12px; /* Reduce aún más el tamaño de fuente en pantallas muy pequeñas */
+    padding: 10px; /* Reduce el padding en botones */
+  }
 }

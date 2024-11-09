@@ -82,10 +82,20 @@ import {
 import {
   CheckingLearningThreeComponent
 } from "./first-competence/components/competence-learning/checking-learning-three/checking-learning-three.component";
+import {CreditsPageComponent} from "./public/component/credits-page/credits-page.component";
+import {
+  FractionPracticeOneComponent
+} from "./first-competence/performance-modules/practice/fraction/fraction-practice-one/fraction-practice-one.component";
+import {
+  FractionPracticeTwoComponent
+} from "./first-competence/performance-modules/practice/fraction/fraction-practice-two/fraction-practice-two.component";
+import {
+  FractionPracticeThreeComponent
+} from "./first-competence/performance-modules/practice/fraction/fraction-practice-three/fraction-practice-three.component";
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'menu', pathMatch:'full'},
+  {path: '', redirectTo:'fra1', pathMatch:'full'},
   {path: 'menu', component: MenuPageComponent},
   {path: 'questionnaire', component: QuestionTwoPageComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
@@ -124,6 +134,11 @@ const routes: Routes = [
   {path: 'checking1', component:CheckingLearningOneComponent },
   {path: 'checking2', component: CheckingLearningTwoComponent},
   {path: 'checking3', component: CheckingLearningThreeComponent},
+  {path: 'profile', component: ProfilePageComponent},
+  {path: 'credits', component: CreditsPageComponent},
+  {path: 'fra1', component: FractionPracticeOneComponent},
+  {path: 'fra2', component: FractionPracticeTwoComponent},
+  {path: 'fra3', component: FractionPracticeThreeComponent},
 
 
 

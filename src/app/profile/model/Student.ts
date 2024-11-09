@@ -9,5 +9,4 @@ export interface Student {
   "department": string,
   "province": string,
   "district": string,
-  "responses": []
 }

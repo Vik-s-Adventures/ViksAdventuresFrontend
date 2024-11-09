@@ -33,7 +33,7 @@ import {
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {QuestionService} from "./first-competence/services/question.service";
 import {PruebainitComponent} from "./public/component/pruebainit/pruebainit.component";
-import {AnswerOptionService} from "./first-competence/services/answer-option.service";
+import {OptionService} from "./first-competence/services/option.service";
 import {StudentService} from "./profile/services/student.service";
 import {QuizService} from "./first-competence/services/quiz.service";
 import {QuizResultService} from "./first-competence/services/quiz-result.service";
@@ -110,6 +110,25 @@ import {
 import {
   CheckingLearningTwoComponent
 } from "./first-competence/components/competence-learning/checking-learning-two/checking-learning-two.component";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+import {CreditsPageComponent} from "./public/component/credits-page/credits-page.component";
+import {
+  FractionPracticeOneComponent
+} from "./first-competence/performance-modules/practice/fraction/fraction-practice-one/fraction-practice-one.component";
+import {
+  FractionPracticeTwoComponent
+} from "./first-competence/performance-modules/practice/fraction/fraction-practice-two/fraction-practice-two.component";
+import {
+  FractionPracticeThreeComponent
+} from "./first-competence/performance-modules/practice/fraction/fraction-practice-three/fraction-practice-three.component";
+import {
+  PercentegePracticeOneComponent
+} from "./first-competence/performance-modules/practice/percentage/percentege-practice-one/percentege-practice-one.component";
+import {
+  PercentegePracticeTwoComponent
+} from "./first-competence/performance-modules/practice/percentage/percentege-practice-two/percentege-practice-two.component";
+import {CdkDrag, CdkDropList, DragDropModule} from "@angular/cdk/drag-drop";
+
 
 
 
@@ -159,6 +178,12 @@ import {
       CheckingLearningOneComponent,
       CheckingLearningTwoComponent,
       RandomQuestionComponent,
+      CreditsPageComponent,
+      FractionPracticeOneComponent,
+      FractionPracticeTwoComponent,
+      FractionPracticeThreeComponent,
+      PercentegePracticeOneComponent,
+      PercentegePracticeTwoComponent,
     ],
   imports: [
     BrowserModule,
@@ -175,8 +200,13 @@ import {
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatSnackBarModule,
+    CdkDropList,
+    CdkDrag,
+    DragDropModule,
+
   ],
-    providers: [QuestionService, AnswerOptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
+    providers: [QuestionService, OptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
     exports: [
         HeaderPageComponent
     ],

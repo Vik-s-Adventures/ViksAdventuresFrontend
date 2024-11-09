@@ -3,4 +3,5 @@ export interface Question {
   performance: number;
   questionText:string;
   quizId: number;
+  imageUrl: string;
 }

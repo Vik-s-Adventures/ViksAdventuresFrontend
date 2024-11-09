@@ -1,39 +1,75 @@
 body {
-  background-image: url('https://i.ibb.co/tsf859Q/fondoinicio.jpg');
+  background-image: url('src/assets/images/fondoinicio.jpg'); /* Ruta de tu imagen de fondo */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
-  margin: 0; /* Elimina márgenes por defecto */
+  min-height: 100vh; /* Cambia a min-height para permitir el scroll en pantallas pequeñas */
+  margin: 0;
   padding: 0;
 }
 
 .titulo {
   padding-top: 65px;
-  display: flex; /* Utiliza flexbox para centrar la imagen dentro del h1 */
-  justify-content: center; /* Centra horizontalmente la imagen */
-  align-items: center; /* Centra verticalmente la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .titulo img {
-  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
+  max-width: 80%; /* Reduce el tamaño en pantallas pequeñas */
+  height: auto;
 }
 
 .card-container {
-  display: flex; /* Utiliza flexbox para alinear las cards horizontalmente */
-  justify-content: space-around; /* Espacio entre las cards */
-  align-items: flex-start; /* Alinea las cards en la parte superior */
-  flex-wrap: nowrap; /* Evita que las cards se ajusten a múltiples líneas */
-  padding: 100px; /* Espaciado alrededor del contenedor */
-  position: relative; /* Permite que las cards se posicionen sobre el fondo */
-  z-index: 1; /* Asegura que las cards estén por encima del fondo */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite que las cards se ajusten a múltiples líneas en pantallas pequeñas */
+  padding: 20px; /* Reduce el padding en pantallas pequeñas */
+  position: relative;
+  z-index: 1;
 }
 
 mat-card {
-  width: 250px; /* Ancho fijo para cada card */
-  margin: 10px; /* Margen entre las cards */
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para destacar sobre el fondo */
-  border-radius: 8px; /* Bordes redondeados para las cards */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  width: 250px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Cambia la dirección para que las cards se apilen */
+    align-items: center; /* Centra las cards */
+    padding: 20px;
+  }
+
+  mat-card {
+    width: 80%; /* Ancho de las cards ajustado a pantallas pequeñas */
+  }
+
+  .titulo img {
+    max-width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    padding-top: 20px; /* Reduce el padding en pantallas muy pequeñas */
+  }
+
+  .titulo img {
+    max-width: 90%;
+  }
+
+  .card-container {
+    padding: 10px;
+  }
+
+  mat-card {
+    width: 90%;
+  }
 }

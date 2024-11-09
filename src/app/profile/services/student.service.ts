@@ -33,4 +33,16 @@ export class StudentService {
     console.error('Error en la solicitud:', error);
     return [];
   }
+
+  createStudent(student: Student): Observable<Student> {
+    return this.http.post<Student>(this.resourcePath(), student);
+  }
+
+  getStudentById(id: number): Observable<Student> {
+    return this.http.get<Student>(`${this.resourcePath()}/${12}`);  // Petición GET para obtener el estudiante por ID
+  }
+
+  updateStudent(student: Student): Observable<Student> {
+    return this.http.put<Student>(`${this.resourcePath()}/${student.id}`, student);
+  }
 }

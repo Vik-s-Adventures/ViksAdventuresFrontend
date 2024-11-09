@@ -20,9 +20,6 @@
       <p>Hoy vamos a aprender cómo los porcentajes y las fracciones están relacionados. ¡Vamos a verlo!</p>
     </div>
 
-    <!-- Flecha para avanzar -->
-    <div class="arrow" *ngIf="currentCard === 0" (click)="nextCard()"></div>
-
     <!-- Card principal explicando qué es un porcentaje -->
     <div class="title" *ngIf="currentCard === 1">
       <h2 class="dynamic-title-small">¿QUÉ ES UN PORCENTAJE?</h2>
@@ -34,13 +31,9 @@
       <img src="assets/images/imaguno.png" alt="Ejemplo de fracción 50/100">
     </div>
 
-    <!-- Flecha para avanzar -->
-    <div class="arrow" *ngIf="currentCard === 1" (click)="nextCard()"></div>
-
     <!-- Card explicando la relación entre porcentajes y fracciones -->
     <div class="title" *ngIf="currentCard === 2">
-      <h2 class="dynamic-title-small">CONVERTIR </h2>
-      <h2 class="dynamic-title-small">PORCENTAJES A FRACCIONES</h2>
+      <h2 class="dynamic-title-small">CONVERTIR PORCENTAJES A FRACCIONES</h2>
     </div>
     <div class="dialog-card" *ngIf="currentCard === 2">
       <p>Para convertir un porcentaje a fracción, simplemente pon el número sobre 100. Ejemplo:</p>
@@ -48,10 +41,6 @@
     <div class="example-card" *ngIf="currentCard === 2">
       <img src="assets/images/imagdos.jpg" alt="Ejemplo">
     </div>
-
-    <!-- Flecha para avanzar -->
-    <div class="arrow-left" *ngIf="currentCard === 1" (click)="previousCard()"></div>
-    <div class="arrow" *ngIf="currentCard === 2" (click)="nextCard()"></div>
 
     <!-- Card explicando cómo simplificar fracciones -->
     <div class="title" *ngIf="currentCard === 3">
@@ -64,33 +53,23 @@
       <img src="assets/images/Imagtres.png" alt="Ejemplo de simplificación">
     </div>
 
-    <!-- Flecha para avanzar -->
-    <div class="arrow-left" *ngIf="currentCard === 2" (click)="previousCard()"></div>
-    <div class="arrow" *ngIf="currentCard === 3" (click)="nextCard()"></div>
-
     <!-- Card explicando ejemplos adicionales de porcentajes y fracciones -->
     <div class="title" *ngIf="currentCard === 4">
-      <h2 class="dynamic-title-small">EJEMPLOS</h2>
-      <h2 class="dynamic-title-small">PORCENTAJES COMUNES</h2>
+      <h2 class="dynamic-title-small">EJEMPLOS PORCENTAJES COMUNES</h2>
     </div>
     <div class="dialog-card" *ngIf="currentCard === 4">
-      <p>Ejemplos comunes: </p>
-      <p> * 25% = 1/4</p>
-      <p> * 75% = 3/4</p>
-      <p> * 20% = 1/5</p>
+      <p>Ejemplos comunes:</p>
+      <p>* 25% = 1/4</p>
+      <p>* 75% = 3/4</p>
+      <p>* 20% = 1/5</p>
     </div>
     <div class="example-card" *ngIf="currentCard === 4">
       <p>Estos son porcentajes que verás con frecuencia.</p>
     </div>
 
-    <!-- Flecha para avanzar -->
-    <div class="arrow-left" *ngIf="currentCard === 3" (click)="previousCard()"></div>
-    <div class="arrow" *ngIf="currentCard === 4" (click)="nextCard()"></div>
-
     <!-- Card explicando cómo sumar y restar porcentajes -->
     <div class="title" *ngIf="currentCard === 5">
-      <h2 class="dynamic-title-small">SUMA Y RESTA</h2>
-      <h2 class="dynamic-title-small">PORCENTAJES</h2>
+      <h2 class="dynamic-title-small">SUMA Y RESTA PORCENTAJES</h2>
     </div>
     <div class="dialog-card" *ngIf="currentCard === 5">
       <p>Para sumar o restar porcentajes, conviértelos a fracciones y luego haz la operación. Ejemplo: 50% + 25% = 1/2 + 1/4 = 3/4.</p>
@@ -98,10 +77,6 @@
     <div class="example-card" *ngIf="currentCard === 5">
       <img src="assets/images/fracc.png" alt="Ejemplo de suma de porcentajes">
     </div>
-
-    <!-- Flecha para avanzar -->
-    <div class="arrow-left" *ngIf="currentCard === 4" (click)="previousCard()"></div>
-    <div class="arrow" *ngIf="currentCard === 5" (click)="nextCard()"></div>
 
     <!-- Card explicando cómo multiplicar porcentajes -->
     <div class="title" *ngIf="currentCard === 6">
@@ -111,35 +86,29 @@
       <p>Multiplicar porcentajes también es fácil. Ejemplo:</p>
     </div>
     <div class="example-card" *ngIf="currentCard === 6">
-      <p>20% de 50%</p>
-      <p>(20/100) * (50/100)</p>
-      <p>10/100 = 10%</p>
+      <p>20% de 50%: (20/100) * (50/100) = 10/100 = 10%</p>
     </div>
-
-    <!-- Flecha para avanzar -->
-    <div class="arrow-left" *ngIf="currentCard === 5" (click)="previousCard()"></div>
-    <div class="arrow" *ngIf="currentCard === 6" (click)="nextCard()"></div>
 
     <!-- Card para explicar consejos útiles sobre porcentajes -->
     <div class="title" *ngIf="currentCard === 7">
       <h2 class="dynamic-title-small">CONSEJOS ÚTILES</h2>
     </div>
-    <div class="dialog-card" *ngIf="currentCard === 7">
+    <div class="dialog-card small-text" *ngIf="currentCard === 7">
       <p>Convierte porcentajes complicados en fracciones para facilitar los cálculos. ¡Simplifica siempre que puedas!</p>
     </div>
 
-    <!-- Flecha para avanzar -->
-    <div class="arrow-left" *ngIf="currentCard === 6" (click)="previousCard()"></div>
-    <div class="arrow" *ngIf="currentCard === 7" (click)="nextCard()"></div>
-
     <!-- Card final con el botón "Recuerda" -->
     <div class="dialog-card" *ngIf="currentCard === 8">
-      <p>¡Eso es todo! Recuerda que los porcentajes y las fracciones están muy relacionados. Puedes encontrar toda esta información presionando el botón "Recuerda".</p>
+      <p>¡Eso es todo! Recuerda que los porcentajes y las fracciones están muy relacionados. Puedes encontrar toda esta información presionando el botón "Temas".</p>
       <button (click)="goToRemember()">CONTINUEMOS</button>
     </div>
 
-    <!-- Flecha para retroceder -->
-    <div class="arrow-left" *ngIf="currentCard === 7" (click)="previousCard()"></div>
-
   </div> <!-- Fin del contenedor de las cards -->
+
+  <!-- Footer con las flechas centradas -->
+  <footer class="footer-container">
+    <div class="arrow-left" *ngIf="currentCard > 0" (click)="previousCard()"></div>
+    <div class="arrow" *ngIf="currentCard < 8" (click)="nextCard()"></div>
+  </footer>
+
 </div>
