@@ -92,10 +92,11 @@ import {
 import {
   FractionPracticeThreeComponent
 } from "./first-competence/performance-modules/practice/fraction/fraction-practice-three/fraction-practice-three.component";
+import {InitComponent} from "./public/init/init.component";
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'fra1', pathMatch:'full'},
+  {path: '', redirectTo:'init', pathMatch:'full'},
   {path: 'menu', component: MenuPageComponent},
   {path: 'questionnaire', component: QuestionTwoPageComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
@@ -139,6 +140,7 @@ const routes: Routes = [
   {path: 'fra1', component: FractionPracticeOneComponent},
   {path: 'fra2', component: FractionPracticeTwoComponent},
   {path: 'fra3', component: FractionPracticeThreeComponent},
+  {path: 'init', component: InitComponent},
 
 
 
