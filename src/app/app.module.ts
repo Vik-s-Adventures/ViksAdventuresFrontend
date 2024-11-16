@@ -129,6 +129,8 @@ import {
 } from "./first-competence/performance-modules/practice/percentage/percentege-practice-two/percentege-practice-two.component";
 import {CdkDrag, CdkDropList, DragDropModule} from "@angular/cdk/drag-drop";
 import {InitComponent} from "./public/init/init.component";
+import {LoginComponent} from "./profile/login/login.component";
+import {RegisterComponent} from "./profile/register/register.component";
 
 
 
@@ -186,6 +188,8 @@ import {InitComponent} from "./public/init/init.component";
       PercentegePracticeOneComponent,
       PercentegePracticeTwoComponent,
       InitComponent,
+      LoginComponent,
+      RegisterComponent,
     ],
   imports: [
     BrowserModule,

@@ -93,6 +93,8 @@ import {
   FractionPracticeThreeComponent
 } from "./first-competence/performance-modules/practice/fraction/fraction-practice-three/fraction-practice-three.component";
 import {InitComponent} from "./public/init/init.component";
+import {LoginComponent} from "./profile/login/login.component";
+import {RegisterComponent} from "./profile/register/register.component";
 
 
 const routes: Routes = [
@@ -141,6 +143,8 @@ const routes: Routes = [
   {path: 'fra2', component: FractionPracticeTwoComponent},
   {path: 'fra3', component: FractionPracticeThreeComponent},
   {path: 'init', component: InitComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
 
 
 

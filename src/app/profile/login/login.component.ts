@@ -1,20 +1,17 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-init',
-  templateUrl: './init.component.html',
-  styleUrl: './init.component.css'
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
 })
-export class InitComponent implements OnInit{
+export class LoginComponent implements OnInit{
   constructor(private router: Router) {}
 
-  navigateToLogin(): void {
-    this.router.navigate(['/login']); // Cambia '/login' al path de tu componente de inicio de sesión
-  }
 
-  navigateToSignUp(): void {
-    this.router.navigate(['/register']); // Cambia '/signup' al path de tu componente de registro
+  navigateMenu() {
+    this.router.navigate(['/menu']); // Cambia '/login' al path de tu componente de inicio de sesión
   }
 
   phaserGame!: Phaser.Game;
@@ -51,6 +48,14 @@ export class InitComponent implements OnInit{
     });
   }
 
+  //movile  ---> CSS
+  preloadkjh() {
+    this.load.spritesheet('character', 'assets/images/vick250ad.png', {
+      frameWidth: 20,
+      frameHeight: 20
+    });
+  }
+
   create() {
     this.anims.create({
       key: 'walk',
@@ -66,4 +71,6 @@ export class InitComponent implements OnInit{
   update() {
     // Lógica de actualización
   }
+
+
 }

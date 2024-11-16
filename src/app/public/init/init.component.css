@@ -15,32 +15,38 @@
 }
 
 .logo {
-  width: 100px;
-  margin-bottom: 20px;
+  width: 70px;
+  margin-bottom: 5px;
 }
 
 .title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2.5rem;
-  color: white;
+  font-size: 3.5rem;
+  color: #FFCC00;
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 20px; /* Añade margen superior para ajustar la posición */
   text-align: center;
+  text-shadow:
+    -1px -1px 0 #ffffff, /* Borde blanco en las cuatro direcciones */
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
 }
 
 .button-container {
   display: flex;
+  margin-top: 50px;
   flex-direction: column; /* Coloca los botones en una columna */
   align-items: center; /* Centra los botones horizontalmente */
-  gap: 15px;
+  gap: 30px;
   width: 100%; /* Ocupa todo el ancho disponible */
   max-width: 300px; /* Tamaño máximo en pantallas grandes */
 }
 
 .action-button {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: blue;
   background-color: white;
   border: none;
@@ -49,6 +55,11 @@
   transition: transform 0.3s, background-color 0.2s;
   border-radius: 25px; /* Bordes ovalados */
   font-weight: bold; /* Letras más gruesas */
+  text-shadow:
+    -1px -1px 0 #000000, /* Borde negro alrededor del texto */
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
 }
 
 .action-button:hover {
@@ -57,7 +68,6 @@
 }
 
 #phaser-container {
-  margin-top: 20px; /* Espacio entre los botones y el sprite */
   overflow: hidden; /* Evita desbordes dentro del contenedor */
   display: flex;
   justify-content: center;
