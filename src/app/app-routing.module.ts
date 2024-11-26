@@ -93,12 +93,13 @@ import {
   FractionPracticeThreeComponent
 } from "./first-competence/performance-modules/practice/fraction/fraction-practice-three/fraction-practice-three.component";
 import {InitComponent} from "./public/init/init.component";
-import {LoginComponent} from "./profile/login/login.component";
-import {RegisterComponent} from "./profile/register/register.component";
+import {SignInComponent} from "./iam/sign-in/sign-in.component";
+import {SignUpComponent} from "./iam/sign-up/sign-up.component";
+import {ProgressBarPageComponent} from "./public/component/progress-bar-page/progress-bar-page.component";
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'init', pathMatch:'full'},
+  {path: '', redirectTo:'progress', pathMatch:'full'},
   {path: 'menu', component: MenuPageComponent},
   {path: 'questionnaire', component: QuestionTwoPageComponent},
   {path: 'welcomeQuestionnaire', component: WelcomeQuestionnairePageComponent},
@@ -143,8 +144,9 @@ const routes: Routes = [
   {path: 'fra2', component: FractionPracticeTwoComponent},
   {path: 'fra3', component: FractionPracticeThreeComponent},
   {path: 'init', component: InitComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
+  {path: 'sign-in', component: SignInComponent},
+  {path: 'sign-up', component: SignUpComponent},
+  {path: 'progress', component: ProgressBarPageComponent},
 
 
 

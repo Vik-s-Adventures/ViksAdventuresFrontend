@@ -74,7 +74,7 @@ export class FourInstructionComponent  implements OnInit {
   }
 
   goToRemember() {
-    this.router.navigate(['/challengeTwo']);
+    this.router.navigate(['/fra1']);
   }
 
   navigateToComponent1() {

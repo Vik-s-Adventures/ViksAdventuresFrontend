@@ -73,6 +73,6 @@ export class FractionPracticeTwoComponent {
   }
 
   goToNext() {
-    this.router.navigate(['/fra3']); // Cambia '/menu' a la ruta real de tu menú principal
+    this.router.navigate(['/challengeTwo']); // Cambia '/menu' a la ruta real de tu menú principal
   }
 }

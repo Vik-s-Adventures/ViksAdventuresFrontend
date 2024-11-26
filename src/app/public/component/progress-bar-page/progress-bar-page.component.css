@@ -1,0 +1,112 @@
+/* Fondo de la página con imagen */
+.page-container {
+  text-align: center;
+  padding: 20px;
+  background-image: url('src/assets/images/fb2fondo.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #ffd166;
+}
+
+/* Título */
+.page-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #ffcb42;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Contenedor de niveles */
+.levels-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+
+/* Fila de cada nivel */
+.level-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(1, 22, 39, 0.8);
+  border: 2px solid #ffd166;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #073b4c;
+}
+
+.level-row.unlocked {
+  background: rgba(255, 215, 0, 0.8);
+}
+
+/* Íconos */
+.level-icon-left img,
+.level-icon-right img {
+  width: 40px;
+  height: 40px;
+}
+
+.level-icon-right img {
+  visibility: hidden; /* Por defecto no visible */
+}
+
+.level-row.unlocked .level-icon-right img {
+  visibility: visible; /* Se hace visible al desbloquear */
+}
+
+/* Barra de progreso */
+.progress-bar {
+  position: relative;
+  flex: 1;
+  margin: 0 10px;
+  height: 40px;
+  background: linear-gradient(90deg, #073b4c, #118ab2);
+  border: 2px solid #ffcb42;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #ffd166,
+    #ffcb42,
+    rgba(255, 255, 255, 0.5)
+  );
+  transition: width 0.4s ease;
+}
+
+.progress-indicator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #011627;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Botones */
+.controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #118ab2, #073b4c);
+  color: white;
+  border: 2px solid #ffcb42;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.controls button:hover {
+  background: linear-gradient(90deg, #073b4c, #118ab2);
+  box-shadow: 0 0 10px #ffcb42;
+}

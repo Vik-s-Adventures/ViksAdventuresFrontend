@@ -1,51 +1,66 @@
+/* Estilo General del Fondo */
 body {
   background-image: url('https://i.ibb.co/TmNbKQD/cha1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  font-family: 'Press Start 2P', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Press Start 2P', cursive;
 }
 
+/* Contenedor de la Tarjeta */
 .card-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;;
-  padding: 50px;
+  align-items: center;
+  padding: 5px;
   z-index: 1;
 }
 
 mat-card {
-  justify-content: start;
-  position: absolute; /* Permite mover la tarjeta usando top, left, right, bottom */
-  top: 150px;          /* Mueve la tarjeta hacia abajo desde la parte superior del contenedor */
-  left: 40px;
+  position: absolute;
+  top: 150px;
+  left: 20px;
   width: 700px;
-  height: 350px;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.footer-container {
-  position: fixed;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
 }
 
-.footer-button {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #B2EBF2;
+/* Opciones de Radio */
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  align-items: flex-start;
+  font-size: 16px;
+}
+
+.example-radio-button {
+  margin: 10px;
   color: #000;
+}
+
+/* Botón Enviar */
+.enviar-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.enviar-button {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #FFD700;
+  color: #000;
+  font-size: 16px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -53,24 +68,69 @@ mat-card {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.enviar-button:hover {
+  background-color: #FFA500;
+  box-shadow: 0 0 10px #FFA500;
+}
+
+/* Diálogo de la Llama */
+.llama-dialog {
+  position: absolute;
+  bottom: 100px;
+  right: 430px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Footer y Botones */
+.footer-container {
+  position: absolute;
+  bottom: 10px; /* Ajustado para estar sobre la madera */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer-button {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #B2EBF2;
+  color: #000;
+  font-size: 18px;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .footer-button:hover {
   background-color: #FFD700;
-  box-shadow: 0 0 10px #FFD700;
+  box-shadow: 0 0 15px #FFD700;
 }
 
-
-.button {
-  width: 150px;
+/* Botón de Desafío */
+.desafio-button {
+  background-color: #FF5733;
+  color: white;
 }
 
-
-.example-radio-group {
-  display: flex;
-  flex-direction: column;
-  margin: 7px 0;
-  align-items: flex-start;
+.desafio-button:hover {
+  background-color: #E74C3C;
 }
 
-.example-radio-button {
-  margin: 5px;
+/* Botón de Continuar */
+.continuar-button {
+  background-color: #2ECC71;
+  color: white;
+}
+
+.continuar-button:hover {
+  background-color: #27AE60;
 }

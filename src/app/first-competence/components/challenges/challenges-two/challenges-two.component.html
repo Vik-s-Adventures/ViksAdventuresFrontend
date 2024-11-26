@@ -3,7 +3,7 @@
 <div class="card-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title style="font-family: 'Arial Black',ui-sans-serif;">
+      <mat-card-title style="font-family: 'Press Start 2P', ui-sans-serif; font-size: 10px;">
         1. Pedro compró cierta cantidad de panes. Puso 1/3 de esta cantidad sobre una bandeja y dejó el resto en la bolsa.
         ¿Cuántos panes dejó Pedro en la bolsa?
       </mat-card-title>
@@ -17,12 +17,20 @@
         {{ answer }}
       </mat-radio-button>
     </mat-radio-group>
+    <div class="enviar-button-container">
+      <button class="enviar-button">ENVIAR</button>
+    </div>
   </mat-card>
 </div>
 
-<!-- Footer con dos botones -->
+<!-- Cuadro de diálogo de la llama -->
+<div class="llama-dialog">
+  <p>Si quieres ayuda, presiona <b>"DESAFIO"</b></p>
+</div>
+
+<!-- Footer con los botones -->
 <footer class="footer-container">
-  <button class="footer-button" (click)="navigateToComponent1()">DESAFIO</button>
-  <button class="footer-button" (click)="navigateToComponent2()">CONTINUAR</button>
+  <button class="footer-button desafio-button" (click)="navigateToComponent1()">DESAFÍO</button>
+  <button class="footer-button continuar-button" (click)="navigateToComponent2()">CONTINUAR</button>
 </footer>
 </body>

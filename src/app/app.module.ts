@@ -129,8 +129,12 @@ import {
 } from "./first-competence/performance-modules/practice/percentage/percentege-practice-two/percentege-practice-two.component";
 import {CdkDrag, CdkDropList, DragDropModule} from "@angular/cdk/drag-drop";
 import {InitComponent} from "./public/init/init.component";
-import {LoginComponent} from "./profile/login/login.component";
 import {RegisterComponent} from "./profile/register/register.component";
+import {SignInComponent} from "./iam/sign-in/sign-in.component";
+import {SignUpComponent} from "./iam/sign-up/sign-up.component";
+import {AuthService} from "./iam/services/auth.service";
+import {UserService} from "./iam/services/user.service";
+import {ProgressBarPageComponent} from "./public/component/progress-bar-page/progress-bar-page.component";
 
 
 
@@ -188,8 +192,10 @@ import {RegisterComponent} from "./profile/register/register.component";
       PercentegePracticeOneComponent,
       PercentegePracticeTwoComponent,
       InitComponent,
-      LoginComponent,
       RegisterComponent,
+      SignInComponent,
+      SignUpComponent,
+      ProgressBarPageComponent,
     ],
   imports: [
     BrowserModule,
@@ -212,7 +218,14 @@ import {RegisterComponent} from "./profile/register/register.component";
     DragDropModule,
 
   ],
-    providers: [QuestionService, OptionService, StudentService, QuizService, QuizResultService, StudentResponseService],
+    providers: [QuestionService,
+                OptionService,
+                StudentService,
+                QuizService,
+                QuizResultService,
+                StudentResponseService,
+                AuthService,
+                UserService],
     exports: [
         HeaderPageComponent
     ],

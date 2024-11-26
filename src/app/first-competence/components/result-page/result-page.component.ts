@@ -14,12 +14,12 @@ export class ResultPageComponent {
     { value: 0, id: 2,title:'Nivel 2', route: '/instructionTwo' },
     { value: 0, id: 3,title:'Nivel 3', route: '/instructionThree' },
     { value: 0, id: 4,title:'Nivel 4', route: '/instructionFour' },
-    { value: 0, id: 5,title:'Nivel 5', route: '/instructionFive' },
-    { value: 0, id: 6,title:'Nivel 6', route: '/instructionSix' },
-    { value: 0, id: 7,title:'Nivel 7', route: '/instructionSeven' },
-    { value: 0, id: 8,title:'Nivel 8', route: '/instructionSix' },
-    { value: 0, id: 9,title:'Nivel 9', route: '/instructionSix' },
-    { value: 0, id: 10,title:'Nivel 10', route: '/instructionSix' }
+    { value: 1, id: 5,title:'Nivel 5', route: '/instructionFive' },
+    { value: 1, id: 6,title:'Nivel 6', route: '/instructionSix' },
+    { value: 1, id: 7,title:'Nivel 7', route: '/instructionSeven' },
+    { value: 1, id: 8,title:'Nivel 8', route: '/instructionSix' },
+    { value: 1, id: 9,title:'Nivel 9', route: '/instructionSix' },
+    { value: 1, id: 10,title:'Nivel 10', route: '/instructionSix' }
   ];
 
   constructor(private router: Router) {

@@ -1,0 +1,40 @@
+<div class="page-container">
+  <h1>⚡ PROGRESO ⚡</h1>
+  <div class="levels-container">
+    <!-- Generar dinámicamente 10 niveles -->
+    <div
+      class="level-row"
+      *ngFor="let level of levels; let i = index"
+      [class.unlocked]="isLevelUnlocked(i + 1)"
+    >
+      <!-- Ícono al lado izquierdo -->
+      <div class="level-icon-left">
+        <img src="assets/images/manzana.png" alt="Nivel" />
+      </div>
+
+      <!-- Barra de progreso -->
+      <div class="progress-bar">
+        <div
+          class="progress-fill"
+          [style.width.%]="getLevelProgress(i + 1)"
+        ></div>
+        <span class="progress-indicator">Nivel {{ i + 1 }} {{level}}</span>
+      </div>
+
+      <!-- Ícono condicional al lado derecho -->
+      <div class="level-icon-right">
+        <img
+          *ngIf="canUnlockReward(i + 1)"
+          src="assets/images/copa.png"
+          alt="Recompensa"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de control -->
+  <div class="controls">
+    <button (click)="increaseProgress()">Incrementar Progreso</button>
+    <button (click)="resetProgress()">Reiniciar</button>
+  </div>
+</div>

@@ -56,14 +56,15 @@ export class PerformanceSublevelTwoComponent implements OnInit {
     this.router.navigate(['/menu']);
   }
   goToRuta(): void {
-    this.router.navigate(['/result']);
+    this.router.navigate(['/']);
   }
 
   updateScore(amount: number): void {
     this.score += amount;
-    if (this.score >= 40) {
+    if (this.score >= 5) {
       alert('¡Has ganado!');
       this.game.scene.stop('pacmanScene');
+      this.router.navigate(['/challengeTwo']);
     }
   }
 

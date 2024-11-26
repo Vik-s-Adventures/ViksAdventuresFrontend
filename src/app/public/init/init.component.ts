@@ -9,12 +9,12 @@ import {Router} from "@angular/router";
 export class InitComponent implements OnInit{
   constructor(private router: Router) {}
 
-  navigateToLogin(): void {
-    this.router.navigate(['/login']); // Cambia '/login' al path de tu componente de inicio de sesión
+  navigateToSignIn(): void {
+    this.router.navigate(['/sign-in']);
   }
 
   navigateToSignUp(): void {
-    this.router.navigate(['/register']); // Cambia '/signup' al path de tu componente de registro
+    this.router.navigate(['/sign-up']);
   }
 
   phaserGame!: Phaser.Game;
